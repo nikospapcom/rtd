@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Redirect } from 'react-router-dom';
+import { Switch, Redirect, withRouter } from 'react-router-dom';
 
 import { RouteWithLayout } from './components';
 
@@ -10,14 +10,15 @@ import { Dashboard as DashboardView } from './pages';
 const Routes = () => {
   return (
     <Switch>
-      <Redirect exact from="/" to="/dashboard" />
+      {/* <Redirect exact from="/" to="/dashboard" /> */}
       <RouteWithLayout
         component={DashboardView}
         exact
         layout={ApplicationLayout}
-        path="/dashboard"
+        path="/"
       />
     </Switch>
   );
 };
+// export default withRouter(Routes);
 export default Routes;

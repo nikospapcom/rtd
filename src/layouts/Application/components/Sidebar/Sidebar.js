@@ -1,27 +1,81 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { SidebarHeader, SidebarNav } from './components';
+
 const Sidebar = () => {
+  const dashboardPages = [
+    {
+      title: 'Dashboard',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Users',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Product',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Typography',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Icons',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Account',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Settings',
+      href: '/dashboard',
+      icon: 'some icon'
+    }
+  ];
+
+  const webAppsPages = [
+    {
+      title: 'Calendar',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Chat',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Contact',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'File Manager',
+      href: '/dashboard',
+      icon: 'some icon'
+    },
+    {
+      title: 'Mail',
+      href: '/dashboard',
+      icon: 'some icon'
+    }
+  ];
+
   return (
     <aside className="relative bg-white h-screen w-64 hidden sm:block border-r">
-      <div className="p-6">
-        <a
-          className="text-white text-3xl font-semibold uppercase hover:text-gray-300"
-          href="index.html">
-          Admin
-        </a>
-        <button className="font-body w-full bg-white cta-btn font-semibold py-2 mt-5 rounded-br-lg rounded-bl-lg rounded-tr-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
-          <i className="fas fa-plus mr-3" /> New Report
-        </button>
-      </div>
-      <nav className="text-white text-base font-semibold pt-3">
-        <a
-          className="flex items-center active-nav-link text-white py-4 pl-6 nav-item"
-          href="index.html">
-          <i className="fas fa-tachometer-alt mr-3" />
-          Dashboard
-        </a>
-      </nav>
+      <SidebarHeader />
+      <SidebarNav pages={dashboardPages} title="Dashboard" />
+      <SidebarNav pages={webAppsPages} title="Web Apps" />
+
       <a
         className="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4"
         href="#">

@@ -11,11 +11,6 @@ const Application = props => {
       <Sidebar />
       <div className="w-full flex flex-col h-screen overflow-y-hidden">
         <Header />
-        {/* <div className="w-full overflow-x-hidden border-t flex flex-col">
-          <main className="w-full flex-grow p-6">
-            <h1 className="text-3xl text-black pb-6 ">Dashboard</h1>
-          </main>
-        </div> */}
         <div className="w-full overflow-x-hidden border-t flex flex-col">
           <main className="w-full flex-grow p-6">{children}</main>
         </div>
