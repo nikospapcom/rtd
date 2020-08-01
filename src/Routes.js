@@ -5,7 +5,7 @@ import { RouteWithLayout } from './components';
 
 import { Application as ApplicationLayout } from './layouts';
 
-import { Dashboard as DashboardView } from './pages';
+import { Dashboard as DashboardView, Alerts as AlertsView } from './pages';
 
 const Routes = () => {
   return (
@@ -16,6 +16,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/"
+      />
+      <RouteWithLayout
+        component={AlertsView}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/alerts"
       />
     </Switch>
   );
