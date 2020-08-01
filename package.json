@@ -17,7 +17,8 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+    "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,12 +39,15 @@
     ]
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.6",
     "eslint": "^6.6.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
+    "postcss-cli": "^7.1.1",
     "prettier": "^1.17.1",
     "prettier-eslint": "^8.8.2",
     "prettier-eslint-cli": "^4.7.1",
+    "tailwindcss": "^1.6.0",
     "typescript": "^3.5.1"
   }
 }
