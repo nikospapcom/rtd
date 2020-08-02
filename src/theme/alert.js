@@ -9,12 +9,8 @@ export const alertVariant = {
   dark: 'text-gray-800 bg-gray-500 border-gray-800'
 };
 
-// export default alertVariant;
-
 export const alertSize = {
   sm: 'py-2 px-4 text-xs',
   nl: 'py-3 px-4',
   lg: 'py-3 px-5 text-lg'
 };
-
-// export default alertSize;

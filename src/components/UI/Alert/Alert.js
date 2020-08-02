@@ -3,16 +3,10 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-// import theme from '../../../theme';
 import alert from '../../../theme';
 
 const Alert = props => {
   const { children, classes } = props;
-
-  console.log(props);
-  console.log('alert');
-  // console.log(theme['alert'].variant[props.variant]);
-  console.log(alert.variant[props.variant]);
 
   const defaultClasses = 'border rounded relative';
 
