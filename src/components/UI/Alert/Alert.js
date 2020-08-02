@@ -9,6 +9,8 @@ import CloseIcon from '@material-ui/icons/Close';
 const Alert = props => {
   const { children, classes } = props;
 
+  console.log(props);
+
   const defaultClasses = 'border rounded relative';
 
   return (
@@ -17,9 +19,11 @@ const Alert = props => {
         defaultClasses,
         alert.variant[props.variant],
         alert.size[props.size],
-        classes
+        classes,
+        props.icon ? 'flex' : ''
       )}
       role="alert">
+      {props.icon ? <span className="mr-2">{props.icon}</span> : null}
       {props.title ? (
         <span className="block font-semibold mb-2">{props.title}</span>
       ) : null}
@@ -66,6 +70,15 @@ Alert.propTypes = {
   hr: PropTypes.bool,
 
   /**
+   * Renders an hr element
+   */
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+    PropTypes.elementType
+  ]),
+
+  /**
    * The Alert visual size
    *
    * @type {'sm' | 'nl' | 'xl'}
@@ -91,12 +104,14 @@ Alert.propTypes = {
 };
 
 Alert.defaultProps = {
+  classes: null,
   dismissible: false,
-  variant: 'primary',
   hr: false,
+  icon: null,
   size: 'nl',
   subtitle: null,
-  title: null
+  title: null,
+  variant: 'primary'
 };
 
 export default Alert;

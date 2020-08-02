@@ -2,6 +2,8 @@ import React from 'react';
 
 import Alert from '../../../components/UI/Alert';
 
+import InfoIcon from '@material-ui/icons/Info';
+
 const Alerts = () => {
   return (
     <div className="container mx-auto">
@@ -105,6 +107,11 @@ const Alerts = () => {
       <hr className="my-8" />
       <div className="my-6 text-xl">Dismissing</div>
       <Alert classes="my-4" dismissible variant="success-outline">
+        A simple primary outline alert with dismiss button!
+      </Alert>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Alert With Icon</div>
+      <Alert classes="my-4" icon={<InfoIcon />} variant="primary">
         A simple primary outline alert with dismiss button!
       </Alert>
     </div>
