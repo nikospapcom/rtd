@@ -50,6 +50,32 @@ const Alerts = () => {
         variant="secondary">
         A simple secondary alert!
       </Alert>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Outline Style</div>
+      <Alert classes="my-4" variant="primary-outline">
+        A simple primary outline alert!
+      </Alert>
+      <Alert classes="my-4" variant="secondary-outline">
+        A simple secondary outline alert!
+      </Alert>
+      <Alert classes="my-4" variant="success-outline">
+        A simple success outline alert!
+      </Alert>
+      <Alert classes="my-4" variant="danger-outline">
+        A simple danger outline alert!
+      </Alert>
+      <Alert classes="my-4" variant="warning-outline">
+        A simple warning outline alert!
+      </Alert>
+      <Alert classes="my-4" variant="info-outline">
+        A simple info outline alert!
+      </Alert>
+      <Alert classes="my-4" variant="light-outline">
+        A simple light outline alert!
+      </Alert>
+      <Alert classes="my-4" variant="dark-outline">
+        A simple dark outline alert!
+      </Alert>
     </div>
   );
 };
