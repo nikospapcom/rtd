@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import alert from '../../../theme';
+import CloseIcon from '@material-ui/icons/Close';
 
 const Alert = props => {
   const { children, classes } = props;
@@ -29,6 +30,15 @@ const Alert = props => {
         <hr className={clsx('my-2', alert.hrBg[props.variant])} />
       ) : null}
       <span className="block sm:inline">{children}</span>
+      {props.dismissible ? (
+        <button
+          aria-label="Close"
+          className="absolute top-0 bottom-0 right-0 px-4 py-3 cursor-pointer"
+          data-dismiss="alert"
+          type="button">
+          <CloseIcon fontSize="small" />
+        </button>
+      ) : null}
     </div>
   );
 };

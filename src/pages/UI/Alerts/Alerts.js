@@ -102,6 +102,11 @@ const Alerts = () => {
       <Alert classes="my-4" variant="dark-solid">
         A simple dark solid alert!
       </Alert>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Dismissing</div>
+      <Alert classes="my-4" dismissible variant="success-outline">
+        A simple primary outline alert with dismiss button!
+      </Alert>
     </div>
   );
 };
