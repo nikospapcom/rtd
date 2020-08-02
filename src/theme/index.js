@@ -1,8 +1,9 @@
-import { alertVariant, alertSize } from './alert';
+import { alertVariant, alertSize, alertHrBg } from './alert';
 
 const alert = {
   variant: alertVariant,
-  size: alertSize
+  size: alertSize,
+  hrBg: alertHrBg
 };
 
 export default alert;

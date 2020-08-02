@@ -19,6 +19,15 @@ const Alert = props => {
         classes
       )}
       role="alert">
+      {props.title ? (
+        <span className="block font-semibold mb-2">{props.title}</span>
+      ) : null}
+      {props.subtitle ? (
+        <span className="block mb-2">{props.subtitle}</span>
+      ) : null}
+      {props.hr ? (
+        <hr className={clsx('my-2', alert.hrBg[props.variant])} />
+      ) : null}
       <span className="block sm:inline">{children}</span>
     </div>
   );
@@ -42,11 +51,26 @@ Alert.propTypes = {
   dismissible: PropTypes.bool,
 
   /**
+   * Renders an hr element
+   */
+  hr: PropTypes.bool,
+
+  /**
    * The Alert visual size
    *
    * @type {'sm' | 'nl' | 'xl'}
    */
   size: PropTypes.string,
+
+  /**
+   * The subtitle of the alert
+   */
+  subtitle: PropTypes.string,
+
+  /**
+   * The title of the alert
+   */
+  title: PropTypes.string,
 
   /**
    * The Alert visual variant
@@ -59,7 +83,10 @@ Alert.propTypes = {
 Alert.defaultProps = {
   dismissible: false,
   variant: 'primary',
-  size: 'nl'
+  hr: false,
+  size: 'nl',
+  subtitle: null,
+  title: null
 };
 
 export default Alert;

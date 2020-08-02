@@ -41,6 +41,15 @@ const Alerts = () => {
         A simple primary alert with size lg!
       </Alert>
       <hr className="my-8" />
+      <div className="my-6 text-xl">Additional Content</div>
+      <Alert
+        classes="my-4"
+        hr
+        subtitle="This text is an example of subtitle."
+        title="Congratulations"
+        variant="secondary">
+        A simple secondary alert!
+      </Alert>
     </div>
   );
 };

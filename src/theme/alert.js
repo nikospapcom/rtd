@@ -14,3 +14,14 @@ export const alertSize = {
   nl: 'py-3 px-4',
   lg: 'py-3 px-5 text-lg'
 };
+
+export const alertHrBg = {
+  primary: 'border-indigo-400',
+  secondary: 'border-gray-400',
+  success: 'border-green-400',
+  danger: 'border-red-400',
+  warning: 'border-yellow-400',
+  info: 'border-blue-400',
+  light: 'border-gray-200',
+  dark: 'border-gray-800'
+};
