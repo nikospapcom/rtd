@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Alert from '../../../components/UI/Alert';
+import { Alert } from '../../../components';
 
 import InfoIcon from '@material-ui/icons/Info';
 

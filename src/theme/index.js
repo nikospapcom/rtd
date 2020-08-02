@@ -1,9 +1,14 @@
 import { alertVariant, alertSize, alertHrBg } from './alert';
+import { avatarRadius, avatarSize, avatarVariant } from './avatar';
 
-const alert = {
+export const alert = {
   variant: alertVariant,
   size: alertSize,
   hrBg: alertHrBg
 };
 
-export default alert;
+export const avatar = {
+  radius: avatarRadius,
+  size: avatarSize,
+  variant: avatarVariant
+};

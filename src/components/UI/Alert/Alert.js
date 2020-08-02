@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import alert from '../../../theme';
+import { alert } from '../../../theme';
+
 import CloseIcon from '@material-ui/icons/Close';
 
 const Alert = props => {
-  const { children, classes } = props;
-
-  console.log(props);
+  const { children, classes, variant, size } = props;
 
   const defaultClasses = 'border rounded relative';
 
@@ -17,8 +16,8 @@ const Alert = props => {
     <div
       className={clsx(
         defaultClasses,
-        alert.variant[props.variant],
-        alert.size[props.size],
+        alert.variant[variant],
+        alert.size[size],
         classes,
         props.icon ? 'flex' : ''
       )}
@@ -30,9 +29,7 @@ const Alert = props => {
       {props.subtitle ? (
         <span className="block mb-2">{props.subtitle}</span>
       ) : null}
-      {props.hr ? (
-        <hr className={clsx('my-2', alert.hrBg[props.variant])} />
-      ) : null}
+      {props.hr ? <hr className={clsx('my-2', alert.hrBg[variant])} /> : null}
       <span className="block sm:inline">{children}</span>
       {props.dismissible ? (
         <button

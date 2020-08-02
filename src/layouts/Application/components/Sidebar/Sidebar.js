@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import { SidebarHeader, SidebarNav } from './components';
 
@@ -73,8 +72,11 @@ const Sidebar = () => {
   const UIPages = [
     {
       title: 'Alerts',
-      href: '/ui/alerts',
-      icon: 'some icon'
+      href: '/ui/alerts'
+    },
+    {
+      title: 'Avatars',
+      href: '/ui/avatars'
     }
   ];
 
@@ -84,13 +86,6 @@ const Sidebar = () => {
       <SidebarNav pages={dashboardPages} title="Dashboard" />
       <SidebarNav pages={webAppsPages} title="Web Apps" />
       <SidebarNav pages={UIPages} title="UI Elements" />
-
-      <a
-        className="absolute w-full upgrade-btn bottom-0 active-nav-link text-white flex items-center justify-center py-4"
-        href="#">
-        <i className="fas fa-arrow-circle-up mr-3" />
-        Upgrade to Pro!
-      </a>
     </aside>
   );
 };
