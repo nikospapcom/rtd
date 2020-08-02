@@ -76,6 +76,32 @@ const Alerts = () => {
       <Alert classes="my-4" variant="dark-outline">
         A simple dark outline alert!
       </Alert>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Solid Background</div>
+      <Alert classes="my-4" variant="primary-solid">
+        A simple primary solid alert!
+      </Alert>
+      <Alert classes="my-4" variant="secondary-solid">
+        A simple secondary solid alert!
+      </Alert>
+      <Alert classes="my-4" variant="success-solid">
+        A simple success solid alert!
+      </Alert>
+      <Alert classes="my-4" variant="danger-solid">
+        A simple danger solid alert!
+      </Alert>
+      <Alert classes="my-4" variant="warning-solid">
+        A simple warning solid alert!
+      </Alert>
+      <Alert classes="my-4" variant="info-solid">
+        A simple info solid alert!
+      </Alert>
+      <Alert classes="my-4" variant="light-solid">
+        A simple light solid alert!
+      </Alert>
+      <Alert classes="my-4" variant="dark-solid">
+        A simple dark solid alert!
+      </Alert>
     </div>
   );
 };

@@ -14,7 +14,15 @@ export const alertVariant = {
   'warning-outline': 'text-yellow-600 bg-white border-yellow-600',
   'info-outline': 'text-blue-600 bg-white border-blue-600',
   'light-outline': 'text-gray-600 bg-white border-gray-600',
-  'dark-outline': 'text-gray-800 bg-white border-gray-800'
+  'dark-outline': 'text-gray-800 bg-white border-gray-800',
+  'primary-solid': 'text-white bg-indigo-600 border-indigo-600',
+  'secondary-solid': 'text-white bg-gray-600 border-gray-600',
+  'success-solid': 'text-white bg-green-600 border-green-600',
+  'danger-solid': 'text-white bg-red-400 border-red-400',
+  'warning-solid': 'text-white bg-yellow-600 border-yellow-600',
+  'info-solid': 'text-white bg-blue-600 border-blue-600',
+  'light-solid': 'text-white bg-gray-600 border-gray-600',
+  'dark-solid': 'text-white bg-gray-800 border-gray-800'
 };
 
 export const alertSize = {
@@ -38,5 +46,13 @@ export const alertHrBg = {
   'danger-outline': 'border-red-400',
   'info-outline': 'border-red-600',
   'light-outline': 'border-gray-600',
-  'dark-outline': 'border-gray-800'
+  'dark-outline': 'border-gray-800',
+  'primary-solid': 'border-white',
+  'secondary-solid': 'border-white',
+  'success-solid': 'border-white',
+  'danger-solid': 'border-white',
+  'warning-solid': 'border-white',
+  'info-solid': 'border-white',
+  'light-solid': 'border-white',
+  'dark-solid': 'border-white'
 };
