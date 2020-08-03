@@ -43,5 +43,15 @@ export const avatarVariant = {
 
 export const avatarStatus = {
   online: 'bg-green-600',
-  offline: 'bg-gray-400'
+  offline: 'bg-gray-600'
+};
+
+export const avatarStatusPosition = {
+  xs: 'bottom-0 right-0 w-2 h-2',
+  sm: 'bottom-0 right-0 w-3 h-3',
+  nl: 'bottom-0 right-0 w-3 h-3',
+  md: 'bottom-0 right-0 w-4 h-4',
+  lg: 'bottom-0 right-0 w-4 h-4',
+  xl: 'bottom-3 right-3 w-4 h-4',
+  xxl: 'bottom-5 right-5 w-4 h-4'
 };

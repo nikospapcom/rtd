@@ -17,8 +17,6 @@ const Avatar = props => {
     status
   } = props;
 
-  console.log(avatar.status[status]);
-
   return (
     <div
       className={clsx(
@@ -36,8 +34,9 @@ const Avatar = props => {
       {status ? (
         <span
           className={clsx(
-            'absolute bottom-0 right-0 w-4 h-4 border-2 rounded-full border-white',
-            avatar.status[status]
+            'absolute border-2 rounded-full border-white',
+            avatar.status[status],
+            avatar.statusPosition[size]
           )}
         />
       ) : null}

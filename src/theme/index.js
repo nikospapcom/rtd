@@ -3,7 +3,8 @@ import {
   avatarRadius,
   avatarSize,
   avatarVariant,
-  avatarStatus
+  avatarStatus,
+  avatarStatusPosition
 } from './avatar';
 
 export const alert = {
@@ -16,5 +17,6 @@ export const avatar = {
   radius: avatarRadius,
   size: avatarSize,
   variant: avatarVariant,
-  status: avatarStatus
+  status: avatarStatus,
+  statusPosition: avatarStatusPosition
 };
