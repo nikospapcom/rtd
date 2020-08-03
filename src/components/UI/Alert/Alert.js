@@ -78,9 +78,9 @@ Alert.propTypes = {
   /**
    * The Alert visual size
    *
-   * @type {'sm' | 'nl' | 'xl'}
+   * @type {'sm' | 'nl' | 'lg'}
    */
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['sm', 'nl', 'lg']),
 
   /**
    * The subtitle of the alert
@@ -95,9 +95,34 @@ Alert.propTypes = {
   /**
    * The Alert visual variant
    *
-   * @type {'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'}
+   * @type {'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'}, with 'outline' extension and with 'primary' extension
    */
-  variant: PropTypes.string
+  variant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    'dark',
+    'light',
+    'primary-outline',
+    'secondary-outline',
+    'success-outline',
+    'danger-outline',
+    'warning-outline',
+    'info-outline',
+    'dark-outline',
+    'light-outline',
+    'primary-solid',
+    'secondary-solid',
+    'success-solid',
+    'danger-solid',
+    'warning-solid',
+    'info-solid',
+    'dark-solid',
+    'light-solid'
+  ])
 };
 
 Alert.defaultProps = {

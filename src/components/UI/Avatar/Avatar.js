@@ -6,14 +6,23 @@ import clsx from 'clsx';
 import { avatar } from '../../../theme';
 
 const Avatar = props => {
-  const { children, src, altText, size, classes, radius, variant } = props;
+  const {
+    children,
+    src,
+    altText,
+    size,
+    classes,
+    radius,
+    variant,
+    status
+  } = props;
 
-  console.log(props);
+  console.log(avatar.status[status]);
 
   return (
     <div
       className={clsx(
-        'flex items-center justify-center',
+        'flex items-center justify-center relative',
         avatar.variant[variant],
         avatar.radius[radius],
         avatar.size[size],
@@ -24,6 +33,14 @@ const Avatar = props => {
       ) : (
         <span>{children}</span>
       )}
+      {status ? (
+        <span
+          className={clsx(
+            'absolute bottom-0 right-0 w-4 h-4 border-2 rounded-full border-white',
+            avatar.status[status]
+          )}
+        />
+      ) : null}
     </div>
   );
 };
@@ -49,19 +66,56 @@ Avatar.propTypes = {
    *
    * @type {'square' | 'rounded' | 'rounded-circle'}
    */
-  radius: PropTypes.string,
+  radius: PropTypes.oneOf(['square', 'rounded', 'rounded-circle']),
 
   /**
    * The Alert visual size
    *
-   * @type {'sm' | 'nl' | 'xl'}
+   * @type {'xs' | 'sm' | 'nl' | 'md' | 'lg' | 'xl' | 'xxl'}
    */
-  size: PropTypes.string,
+  size: PropTypes.oneOf(['xs', 'sm', 'nl', 'md', 'lg', 'xl', 'xxl']),
 
   /**
    * The source of the image
    */
-  src: PropTypes.string
+  src: PropTypes.string,
+
+  /**
+   * The status of the image
+   */
+  status: PropTypes.oneOf(['online', 'offline']),
+
+  /**
+   * The Alert visual variant
+   *
+   * @type {'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'}, with 'outline' extension and with 'primary' extension
+   */
+  variant: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'success',
+    'danger',
+    'warning',
+    'info',
+    'dark',
+    'light',
+    'primary-outline',
+    'secondary-outline',
+    'success-outline',
+    'danger-outline',
+    'warning-outline',
+    'info-outline',
+    'dark-outline',
+    'light-outline',
+    'primary-solid',
+    'secondary-solid',
+    'success-solid',
+    'danger-solid',
+    'warning-solid',
+    'info-solid',
+    'dark-solid',
+    'light-solid'
+  ])
 };
 
 Avatar.defaultProps = {
@@ -70,6 +124,7 @@ Avatar.defaultProps = {
   size: 'nl',
   src: null,
   radius: 'rounded-circle',
+  status: null,
   variant: 'primary'
 };
 

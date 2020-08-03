@@ -1,5 +1,10 @@
 import { alertVariant, alertSize, alertHrBg } from './alert';
-import { avatarRadius, avatarSize, avatarVariant } from './avatar';
+import {
+  avatarRadius,
+  avatarSize,
+  avatarVariant,
+  avatarStatus
+} from './avatar';
 
 export const alert = {
   variant: alertVariant,
@@ -10,5 +15,6 @@ export const alert = {
 export const avatar = {
   radius: avatarRadius,
   size: avatarSize,
-  variant: avatarVariant
+  variant: avatarVariant,
+  status: avatarStatus
 };

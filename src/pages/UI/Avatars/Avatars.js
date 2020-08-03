@@ -186,6 +186,22 @@ const Avatars = () => {
       </div>
       <hr className="my-8" />
       <div className="my-6 text-xl">Status Indicator</div>
+      <div className="flex items-center">
+        <Avatar
+          altText="This is altText"
+          classes="mr-4"
+          size="lg"
+          src="https://source.unsplash.com/autok_VqU9U/400x400"
+          status="online"
+        />
+        <Avatar
+          altText="This is altText"
+          classes="mr-4"
+          size="lg"
+          src="https://source.unsplash.com/autok_VqU9U/400x400"
+          status="offline"
+        />
+      </div>
       <hr className="my-8" />
       <div className="my-6 text-xl">Grouped</div>
     </div>

@@ -40,3 +40,8 @@ export const avatarVariant = {
   'light-solid': 'text-white bg-gray-600',
   'dark-solid': 'text-white bg-gray-800'
 };
+
+export const avatarStatus = {
+  online: 'bg-green-600',
+  offline: 'bg-gray-400'
+};
