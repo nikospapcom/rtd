@@ -19,8 +19,6 @@ const Avatar = props => {
     variant
   } = props;
 
-  console.log(props);
-
   return (
     <div
       className={clsx(

@@ -6,8 +6,6 @@ import clsx from 'clsx';
 const AvatarGroup = props => {
   const { children, classes } = props;
 
-  console.log(children);
-
   return (
     <div className={clsx('flex overflow-hidden', classes)}>
       {children.slice(0, children.length).map((child, index) => {

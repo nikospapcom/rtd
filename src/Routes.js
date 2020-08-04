@@ -6,9 +6,10 @@ import { RouteWithLayout } from './components';
 import { Application as ApplicationLayout } from './layouts';
 
 import {
-  Dashboard as DashboardView,
-  Alerts as AlertsView,
-  Avatars as AvatarsView
+  Dashboard as DashboardPage,
+  Alerts as AlertsPage,
+  Avatars as AvatarsPage,
+  Breadcrumbs as BreadcrumbsPage
 } from './pages';
 
 const Routes = () => {
@@ -16,22 +17,28 @@ const Routes = () => {
     <Switch>
       <Redirect exact from="/" to="/dashboard" />
       <RouteWithLayout
-        component={DashboardView}
+        component={DashboardPage}
         exact
         layout={ApplicationLayout}
         path="/dashboard"
       />
       <RouteWithLayout
-        component={AlertsView}
+        component={AlertsPage}
         exact
         layout={ApplicationLayout}
         path="/ui/alerts"
       />
       <RouteWithLayout
-        component={AvatarsView}
+        component={AvatarsPage}
         exact
         layout={ApplicationLayout}
         path="/ui/avatars"
+      />
+      <RouteWithLayout
+        component={BreadcrumbsPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/breadcrumbs"
       />
     </Switch>
   );

@@ -77,6 +77,10 @@ const Sidebar = () => {
     {
       title: 'Avatars',
       href: '/ui/avatars'
+    },
+    {
+      title: 'Breadcrumbs',
+      href: '/ui/breadcrumbs'
     }
   ];
 

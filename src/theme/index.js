@@ -8,6 +8,8 @@ import {
   avatarGroupMargin
 } from './avatar';
 
+import { breadcrumbsAlign, breadcrumbsSize } from './breadcrumbs';
+
 export const alert = {
   variant: alertVariant,
   size: alertSize,
@@ -21,4 +23,9 @@ export const avatar = {
   status: avatarStatus,
   statusPosition: avatarStatusPosition,
   groupMargin: avatarGroupMargin
+};
+
+export const breadcrumbs = {
+  align: breadcrumbsAlign,
+  size: breadcrumbsSize
 };
