@@ -7,15 +7,19 @@ import { avatar } from '../../../theme';
 
 const Avatar = props => {
   const {
-    children,
-    src,
     altText,
-    size,
+    children,
     classes,
+    grouped,
+    isFirst,
     radius,
-    variant,
-    status
+    size,
+    src,
+    status,
+    variant
   } = props;
+
+  console.log(props);
 
   return (
     <div
@@ -24,6 +28,8 @@ const Avatar = props => {
         avatar.variant[variant],
         avatar.radius[radius],
         avatar.size[size],
+        grouped ? 'inline-block border-2 border-white' : '',
+        grouped ? (isFirst ? avatar.groupMargin[size] : '') : '',
         classes
       )}>
       {src ? (
@@ -53,12 +59,22 @@ Avatar.propTypes = {
   /**
    * The content of the avatar
    */
-  children: PropTypes.string,
+  children: PropTypes.node,
 
   /**
    * The classes coming from props
    */
   classes: PropTypes.string,
+
+  /**
+   * Renders appropriate classes if grouped equal to true
+   */
+  grouped: PropTypes.bool,
+
+  /**
+   * Renders appropriate classes if avatar is not first in AvatarGroup
+   */
+  isFirst: PropTypes.bool,
 
   /**
    * The Avatar radius
@@ -120,6 +136,8 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   altText: null,
   classes: null,
+  grouped: false,
+  isFirst: false,
   size: 'nl',
   src: null,
   radius: 'rounded-circle',

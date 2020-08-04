@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Avatar } from '../../../components';
+import { Avatar, AvatarGroup } from '../../../components';
 
 const Avatars = () => {
   return (
@@ -78,25 +78,25 @@ const Avatars = () => {
       <hr className="my-8" />
       <div className="my-6 text-xl">Initials</div>
       <div className="flex items-center">
-        <Avatar variant="primary" classes="mr-4" size="xs">
+        <Avatar classes="mr-4" size="xs" variant="primary">
           NP
         </Avatar>
-        <Avatar variant="primary" classes="mr-4" size="sm">
+        <Avatar classes="mr-4" size="sm" variant="primary">
           NP
         </Avatar>
-        <Avatar variant="primary" classes="mr-4">
+        <Avatar classes="mr-4" variant="primary">
           NP
         </Avatar>
-        <Avatar variant="primary" classes="mr-4" size="md">
+        <Avatar classes="mr-4" size="md" variant="primary">
           NP
         </Avatar>
-        <Avatar variant="primary" classes="mr-4" size="lg">
+        <Avatar classes="mr-4" size="lg" variant="primary">
           NP
         </Avatar>
-        <Avatar variant="primary" classes="mr-4" size="xl">
+        <Avatar classes="mr-4" size="xl" variant="primary">
           NP
         </Avatar>
-        <Avatar variant="primary" classes="mr-4" size="xxl">
+        <Avatar classes="mr-4" size="xxl" variant="primary">
           NP
         </Avatar>
       </div>
@@ -204,6 +204,32 @@ const Avatars = () => {
       </div>
       <hr className="my-8" />
       <div className="my-6 text-xl">Grouped</div>
+      <AvatarGroup>
+        <Avatar
+          altText="This is altText"
+          key="0"
+          size="lg"
+          src="https://source.unsplash.com/autok_VqU9U/400x400"
+        />
+        <Avatar
+          altText="This is altText"
+          key="1"
+          size="lg"
+          src="https://source.unsplash.com/autok_VqU9U/400x400"
+        />
+        <Avatar
+          altText="This is altText"
+          key="2"
+          size="lg"
+          src="https://source.unsplash.com/autok_VqU9U/400x400"
+        />
+        <Avatar
+          altText="This is altText"
+          key="3"
+          size="lg"
+          src="https://source.unsplash.com/autok_VqU9U/400x400"
+        />
+      </AvatarGroup>
     </div>
   );
 };

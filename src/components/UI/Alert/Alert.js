@@ -48,7 +48,7 @@ Alert.propTypes = {
   /**
    * The content of the alert
    */
-  children: PropTypes.string,
+  children: PropTypes.node,
 
   /**
    * The classes coming from props

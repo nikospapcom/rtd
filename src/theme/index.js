@@ -4,7 +4,8 @@ import {
   avatarSize,
   avatarVariant,
   avatarStatus,
-  avatarStatusPosition
+  avatarStatusPosition,
+  avatarGroupMargin
 } from './avatar';
 
 export const alert = {
@@ -18,5 +19,6 @@ export const avatar = {
   size: avatarSize,
   variant: avatarVariant,
   status: avatarStatus,
-  statusPosition: avatarStatusPosition
+  statusPosition: avatarStatusPosition,
+  groupMargin: avatarGroupMargin
 };

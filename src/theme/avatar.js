@@ -55,3 +55,13 @@ export const avatarStatusPosition = {
   xl: 'bottom-3 right-3 w-4 h-4',
   xxl: 'bottom-5 right-5 w-4 h-4'
 };
+
+export const avatarGroupMargin = {
+  xs: '-ml-2',
+  sm: '-ml-3',
+  nl: '-ml-4',
+  md: '-ml-5',
+  lg: '-ml-6',
+  xl: '-ml-8',
+  xxl: '-ml-10'
+};
