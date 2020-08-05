@@ -9,6 +9,7 @@ import {
   Dashboard as DashboardPage,
   Alerts as AlertsPage,
   Avatars as AvatarsPage,
+  Badges as BadgesPage,
   Breadcrumbs as BreadcrumbsPage
 } from './pages';
 
@@ -33,6 +34,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/ui/avatars"
+      />
+      <RouteWithLayout
+        component={BadgesPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/badges"
       />
       <RouteWithLayout
         component={BreadcrumbsPage}

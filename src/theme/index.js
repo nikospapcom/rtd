@@ -10,6 +10,8 @@ import {
 
 import { breadcrumbsAlign, breadcrumbsSize } from './breadcrumbs';
 
+import { badgeVariant, badgePill, badgeSize } from './badge';
+
 export const alert = {
   variant: alertVariant,
   size: alertSize,
@@ -28,4 +30,10 @@ export const avatar = {
 export const breadcrumbs = {
   align: breadcrumbsAlign,
   size: breadcrumbsSize
+};
+
+export const badge = {
+  variant: badgeVariant,
+  pill: badgePill,
+  size: badgeSize
 };

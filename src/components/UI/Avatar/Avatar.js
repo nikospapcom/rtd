@@ -101,7 +101,7 @@ Avatar.propTypes = {
   /**
    * The Alert visual variant
    *
-   * @type {'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'}, with 'outline' extension and with 'primary' extension
+   * @type {'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'}, with 'outline' extension and with 'solid' extension
    */
   variant: PropTypes.oneOf([
     'primary',

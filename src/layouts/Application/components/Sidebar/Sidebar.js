@@ -71,6 +71,10 @@ const Sidebar = () => {
 
   const UIPages = [
     {
+      title: 'Accordion',
+      href: '#'
+    },
+    {
       title: 'Alerts',
       href: '/ui/alerts'
     },
@@ -79,8 +83,20 @@ const Sidebar = () => {
       href: '/ui/avatars'
     },
     {
+      title: 'Badges',
+      href: '/ui/badges'
+    },
+    {
       title: 'Breadcrumbs',
       href: '/ui/breadcrumbs'
+    },
+    {
+      title: 'Buttons',
+      href: '#'
+    },
+    {
+      title: 'Button Groups',
+      href: '#'
     }
   ];
 
