@@ -6,13 +6,9 @@ import clsx from 'clsx';
 import { badge } from '../../../theme';
 
 const Badge = props => {
-  const { children, classes, variant, size, pill } = props;
+  const { children, classes, isBold, pill, rounded, size, variant } = props;
 
-  console.log('pill', pill);
-  console.log('badge.pill', badge.pill);
-
-  const defaultClasses =
-    'inline-block rounded leading-none relative font-semibold';
+  const defaultClasses = 'inline-block rounded leading-none relative';
 
   return (
     <div
@@ -21,6 +17,8 @@ const Badge = props => {
         badge.variant[variant],
         badge.size[size],
         pill ? badge.pill[size] : '',
+        isBold ? 'font-bold' : '',
+        rounded ? 'rounded-full' : '',
         classes
       )}>
       {children}
@@ -40,9 +38,19 @@ Badge.propTypes = {
   classes: PropTypes.string,
 
   /**
+   * The Badge font weight
+   */
+  isBold: PropTypes.bool,
+
+  /**
    * The Badge pill attribute
    */
   pill: PropTypes.bool,
+
+  /**
+   * The Badge rounded bool
+   */
+  rounded: PropTypes.bool,
 
   /**
    * The Alert visual size
@@ -78,7 +86,9 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   classes: null,
+  isBold: false,
   pill: false,
+  rounded: false,
   size: 'nl',
   variant: 'primary'
 };

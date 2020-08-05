@@ -103,10 +103,48 @@ const Badges = () => {
       </div>
       <hr className="my-8" />
       <div className="my-6 text-xl">Rounded</div>
+      <div>
+        <Badge classes="mr-1" rounded>
+          Primary rounded
+        </Badge>
+        <Badge classes="mr-1" rounded variant="secondary">
+          Secondary rounded
+        </Badge>
+        <Badge classes="mr-1" rounded variant="success">
+          Success rounded
+        </Badge>
+        <Badge classes="mr-1" rounded variant="danger">
+          Danger rounded
+        </Badge>
+        <Badge classes="mr-1" rounded variant="warning">
+          Warning rounded
+        </Badge>
+        <Badge classes="mr-1" rounded variant="info">
+          Info rounded
+        </Badge>
+        <Badge classes="mr-1" rounded variant="dark">
+          Dark rounded
+        </Badge>
+        <Badge classes="mr-1" rounded variant="light">
+          Light rounded
+        </Badge>
+      </div>
       <hr className="my-8" />
-      <div className="my-6 text-xl">Avatar</div>
-      <hr className="my-8" />
-      <div className="my-6 text-xl">Close</div>
+      <div className="my-6 text-xl">Bold</div>
+      <div>
+        <Badge classes="mr-1" isBold rounded>
+          Primary Bold
+        </Badge>
+        <Badge classes="mr-1" isBold variant="success">
+          Success Bold
+        </Badge>
+        <Badge classes="mr-1" isBold variant="success-outline">
+          Success Outline Bold
+        </Badge>
+        <Badge classes="mr-1" isBold variant="danger-outline">
+          Danger Outline Bold
+        </Badge>
+      </div>
     </div>
   );
 };
