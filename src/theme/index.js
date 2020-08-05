@@ -12,6 +12,8 @@ import { breadcrumbsAlign, breadcrumbsSize } from './breadcrumbs';
 
 import { badgeVariant, badgePill, badgeSize } from './badge';
 
+import { buttonVariant, hoverButtonVariant, buttonSize } from './button';
+
 export const alert = {
   variant: alertVariant,
   size: alertSize,
@@ -36,4 +38,10 @@ export const badge = {
   variant: badgeVariant,
   pill: badgePill,
   size: badgeSize
+};
+
+export const button = {
+  variant: buttonVariant,
+  hoverVariant: hoverButtonVariant,
+  size: buttonSize
 };

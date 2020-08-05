@@ -92,7 +92,7 @@ const Sidebar = () => {
     },
     {
       title: 'Buttons',
-      href: '#'
+      href: '/ui/buttons'
     },
     {
       title: 'Button Groups',

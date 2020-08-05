@@ -10,7 +10,8 @@ import {
   Alerts as AlertsPage,
   Avatars as AvatarsPage,
   Badges as BadgesPage,
-  Breadcrumbs as BreadcrumbsPage
+  Breadcrumbs as BreadcrumbsPage,
+  Buttons as ButtonsPage
 } from './pages';
 
 const Routes = () => {
@@ -46,6 +47,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/ui/breadcrumbs"
+      />
+      <RouteWithLayout
+        component={ButtonsPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/buttons"
       />
     </Switch>
   );
