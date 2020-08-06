@@ -7,7 +7,11 @@ const Card = props => {
   const { children, className } = props;
 
   return (
-    <div className={clsx('rounded overflow-hidden shadow-lg', className)}>
+    <div
+      className={clsx(
+        'rounded overflow-hidden border border-gray-300',
+        className
+      )}>
       {children}
     </div>
   );

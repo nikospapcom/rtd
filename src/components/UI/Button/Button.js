@@ -56,7 +56,7 @@ const Button = props => {
         'transition duration-300 rounded border',
         button.variant[variant],
         button.size[size],
-        fullWidth ? 'block w-full' : null,
+        fullWidth ? 'block w-full' : 'inline-block',
         disabled
           ? 'opacity-75 cursor-not-allowed'
           : button.hoverVariant[variant],

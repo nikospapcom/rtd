@@ -6,3 +6,4 @@ export { default as Breadcrumbs } from './UI/Breadcrumbs';
 export { default as Badge } from './UI/Badge';
 export { default as Button } from './UI/Button';
 export { default as Card } from './UI/Card';
+export { default as CardContent } from './UI/CardContent';
