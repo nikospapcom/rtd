@@ -2,6 +2,9 @@ import React from 'react';
 
 import { Button } from '../../../components';
 
+import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
+import CheckIcon from '@material-ui/icons/Check';
+
 const Buttons = () => {
   return (
     <div className="container mx-auto">
@@ -122,6 +125,26 @@ const Buttons = () => {
         </Button>
         <Button className="mr-2 mb-2" disabled variant="success-solid">
           Success
+        </Button>
+      </div>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Rounded</div>
+      <div>
+        <Button className="mr-2 mb-2" rounded>
+          Primary
+        </Button>
+        <Button className="mr-2 mb-2" rounded variant="secondary-solid">
+          Success
+        </Button>
+      </div>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Icon Buttons</div>
+      <div>
+        <Button className="mr-2 mb-2" iconButton variant="danger-solid">
+          <DeleteForeverIcon fontSize="small" />
+        </Button>
+        <Button className="mr-2 mb-2" iconButton variant="primary-solid">
+          <CheckIcon fontSize="small" />
         </Button>
       </div>
     </div>

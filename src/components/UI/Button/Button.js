@@ -11,6 +11,8 @@ const Button = props => {
     className,
     disabled,
     fullWidth,
+    iconButton,
+    rounded,
     size,
     variant,
     ...rest
@@ -19,13 +21,15 @@ const Button = props => {
   return (
     <button
       className={clsx(
-        'transition duration-300 py-2 px-4 rounded border',
+        'transition duration-300 rounded border',
         button.variant[variant],
         button.size[size],
         fullWidth ? 'block w-full' : null,
         disabled
           ? 'opacity-75 cursor-not-allowed'
           : button.hoverVariant[variant],
+        rounded ? 'rounded-full' : '',
+        iconButton ? 'py-2 px-2 leading-none rounded-full' : 'py-2 px-4',
         className
       )}
       {...rest}>
@@ -38,7 +42,11 @@ Button.propTypes = {
   /**
    * The content of the Button
    */
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+    PropTypes.elementType
+  ]),
 
   /**
    * The className coming from props
@@ -54,6 +62,17 @@ Button.propTypes = {
    * If true, the button will take up the full width of its container.
    */
   fullWidth: PropTypes.bool,
+
+  /**
+   * If true, the button will take equal width and height
+   */
+  iconButton: PropTypes.bool,
+
+  /**
+   * The Button rounded bool
+   */
+  rounded: PropTypes.bool,
+
   /**
    * The Button visual size
    *
