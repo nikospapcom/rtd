@@ -9,26 +9,52 @@ const Button = props => {
   const {
     children,
     className,
+    component,
     disabled,
     fullWidth,
+    href,
     iconButton,
     rounded,
     size,
+    type,
     startIcon: startIconProp,
     endIcon: endIconProp,
     variant,
     ...rest
   } = props;
 
+  let ComponentProp = component;
+
+  if (ComponentProp === 'button' && href) {
+    ComponentProp = 'a';
+  }
+
+  const buttonProps = {};
+  if (ComponentProp === 'button') {
+    buttonProps.type = type;
+    buttonProps.disabled = disabled;
+  } else {
+    if (ComponentProp !== 'a' || !href) {
+      buttonProps.role = 'button';
+    }
+    buttonProps['aria-disabled'] = disabled;
+    buttonProps['href'] = href;
+  }
+
+  // console.log(props);
+  console.log(rest);
+
   const startIcon = startIconProp && (
-    <span className="mr-1">{startIconProp}</span>
+    <span className="mr-1 leading-none">{startIconProp}</span>
   );
-  const endIcon = endIconProp && <span className="ml-1">{endIconProp}</span>;
+  const endIcon = endIconProp && (
+    <span className="ml-1 leading-none">{endIconProp}</span>
+  );
   const content =
     startIconProp || endIconProp ? <span>{children}</span> : children;
 
   return (
-    <button
+    <ComponentProp
       className={clsx(
         'transition duration-300 rounded border',
         button.variant[variant],
@@ -42,11 +68,12 @@ const Button = props => {
         startIcon || endIcon ? 'inline-flex items-center' : null,
         className
       )}
-      {...rest}>
+      {...rest}
+      {...buttonProps}>
       {startIcon}
       {content}
       {endIcon}
-    </button>
+    </ComponentProp>
   );
 };
 
@@ -66,6 +93,12 @@ Button.propTypes = {
   className: PropTypes.string,
 
   /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: PropTypes.elementType,
+
+  /**
    * If true, the button will be disabled.
    */
   disabled: PropTypes.bool,
@@ -81,6 +114,12 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
 
   /**
+   * The URL to link to when the button is clicked.
+   * If defined, an `a` element will be used as the root node.
+   */
+  href: PropTypes.string,
+
+  /**
    * If true, the button will take equal width and height
    */
   iconButton: PropTypes.bool,
@@ -93,7 +132,7 @@ Button.propTypes = {
   /**
    * The Button visual size
    *
-   * @type {'sm' | 'nl' | 'lg'}
+   * @type {'xs', 'sm' | 'nl' | 'lg'}
    */
   size: PropTypes.oneOf(['xs', 'sm', 'nl', 'lg']),
 
@@ -144,6 +183,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  component: 'button',
   fullWidth: false,
   disabled: false,
   size: 'nl',

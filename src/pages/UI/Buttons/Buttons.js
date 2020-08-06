@@ -153,7 +153,6 @@ const Buttons = () => {
       <div>
         <Button
           className="mr-2 mb-2"
-          iconButton
           startIcon={<DeleteForeverIcon className="w-4 h-4" />}
           variant="danger-solid">
           Delete
@@ -161,9 +160,33 @@ const Buttons = () => {
         <Button
           className="mr-2 mb-2"
           endIcon={<SendIcon className="w-4 h-4" />}
-          iconButton
           variant="primary-solid">
           Send
+        </Button>
+      </div>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Link as Buttons</div>
+      <div>
+        <Button
+          className="mr-2 mb-2"
+          component="a"
+          href="https://www.google.com"
+          target="_blank"
+          variant="danger-solid">
+          Delete
+        </Button>
+      </div>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Button Types</div>
+      <div>
+        <Button className="mr-2 mb-2" type="button" variant="secondary-solid">
+          Button type
+        </Button>
+        <Button className="mr-2 mb-2" type="submit" variant="info-solid">
+          Submit type
+        </Button>
+        <Button className="mr-2 mb-2" type="reset" variant="info">
+          Reset type
         </Button>
       </div>
     </div>
