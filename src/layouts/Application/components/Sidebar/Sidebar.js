@@ -71,8 +71,8 @@ const Sidebar = () => {
 
   const UIPages = [
     {
-      title: 'Accordion',
-      href: '#'
+      title: 'Accordions',
+      href: '/ui/accordions'
     },
     {
       title: 'Alerts',

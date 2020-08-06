@@ -7,6 +7,7 @@ import { Application as ApplicationLayout } from './layouts';
 
 import {
   Dashboard as DashboardPage,
+  Accordions as AccordionsPage,
   Alerts as AlertsPage,
   Avatars as AvatarsPage,
   Badges as BadgesPage,
@@ -23,6 +24,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/dashboard"
+      />
+      <RouteWithLayout
+        component={AccordionsPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/accordions"
       />
       <RouteWithLayout
         component={AlertsPage}
