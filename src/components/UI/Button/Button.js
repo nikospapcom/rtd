@@ -20,8 +20,10 @@ const Button = props => {
     ...rest
   } = props;
 
-  const startIcon = startIconProp && <span>{startIconProp}</span>;
-  const endIcon = endIconProp && <span>{endIconProp}</span>;
+  const startIcon = startIconProp && (
+    <span className="mr-1">{startIconProp}</span>
+  );
+  const endIcon = endIconProp && <span className="ml-1">{endIconProp}</span>;
   const content =
     startIconProp || endIconProp ? <span>{children}</span> : children;
 

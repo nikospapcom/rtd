@@ -162,7 +162,7 @@ const Buttons = () => {
           className="mr-2 mb-2"
           endIcon={<SendIcon className="w-4 h-4" />}
           iconButton
-          variant="danger-solid">
+          variant="primary-solid">
           Send
         </Button>
       </div>
