@@ -5,3 +5,4 @@ export { default as AvatarGroup } from './UI/AvatarGroup';
 export { default as Breadcrumbs } from './UI/Breadcrumbs';
 export { default as Badge } from './UI/Badge';
 export { default as Button } from './UI/Button';
+export { default as Card } from './UI/Card';

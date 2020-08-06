@@ -41,9 +41,6 @@ const Button = props => {
     buttonProps['href'] = href;
   }
 
-  // console.log(props);
-  console.log(rest);
-
   const startIcon = startIconProp && (
     <span className="mr-1 leading-none">{startIconProp}</span>
   );
