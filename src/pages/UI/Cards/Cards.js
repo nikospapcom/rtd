@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card, CardContent, Button } from '../../../components';
+import { Card, CardMedia, CardContent, Button } from '../../../components';
 
 const Cards = () => {
   return (
@@ -9,6 +9,12 @@ const Cards = () => {
       <hr className="my-8" />
       <div className="max-w-sm">
         <Card>
+          <CardMedia
+            alt="Contemplative Reptile"
+            component="img"
+            height="150"
+            image="https://tailwindcss.com/img/card-top.jpg"
+          />
           <CardContent>
             <div className="text-base font-medium mb-1">Card Title</div>
             <div className="text-sm text-gray-500 font-medium mb-2">
