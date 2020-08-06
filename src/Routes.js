@@ -12,7 +12,8 @@ import {
   Avatars as AvatarsPage,
   Badges as BadgesPage,
   Breadcrumbs as BreadcrumbsPage,
-  Buttons as ButtonsPage
+  Buttons as ButtonsPage,
+  Cards as CardsPage
 } from './pages';
 
 const Routes = () => {
@@ -61,8 +62,14 @@ const Routes = () => {
         layout={ApplicationLayout}
         path="/ui/buttons"
       />
+      <RouteWithLayout
+        component={CardsPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/cards"
+      />
     </Switch>
   );
 };
-// export default withRouter(Routes);
+
 export default Routes;

@@ -41,33 +41,33 @@ const Sidebar = () => {
     }
   ];
 
-  const webAppsPages = [
-    {
-      title: 'Calendar',
-      href: '/dashboard',
-      icon: 'some icon'
-    },
-    {
-      title: 'Chat',
-      href: '/dashboard',
-      icon: 'some icon'
-    },
-    {
-      title: 'Contact',
-      href: '/dashboard',
-      icon: 'some icon'
-    },
-    {
-      title: 'File Manager',
-      href: '/dashboard',
-      icon: 'some icon'
-    },
-    {
-      title: 'Mail',
-      href: '/dashboard',
-      icon: 'some icon'
-    }
-  ];
+  // const webAppsPages = [
+  //   {
+  //     title: 'Calendar',
+  //     href: '/dashboard',
+  //     icon: 'some icon'
+  //   },
+  //   {
+  //     title: 'Chat',
+  //     href: '/dashboard',
+  //     icon: 'some icon'
+  //   },
+  //   {
+  //     title: 'Contact',
+  //     href: '/dashboard',
+  //     icon: 'some icon'
+  //   },
+  //   {
+  //     title: 'File Manager',
+  //     href: '/dashboard',
+  //     icon: 'some icon'
+  //   },
+  //   {
+  //     title: 'Mail',
+  //     href: '/dashboard',
+  //     icon: 'some icon'
+  //   }
+  // ];
 
   const UIPages = [
     {
@@ -97,6 +97,10 @@ const Sidebar = () => {
     {
       title: 'Button Groups',
       href: '#'
+    },
+    {
+      title: 'Cards',
+      href: '/ui/cards'
     }
   ];
 
@@ -104,7 +108,7 @@ const Sidebar = () => {
     <aside className="relative bg-white h-screen w-64 hidden sm:block border-r">
       <SidebarHeader />
       <SidebarNav pages={dashboardPages} title="Dashboard" />
-      <SidebarNav pages={webAppsPages} title="Web Apps" />
+      {/* <SidebarNav pages={webAppsPages} title="Web Apps" /> */}
       <SidebarNav pages={UIPages} title="UI Elements" />
     </aside>
   );
