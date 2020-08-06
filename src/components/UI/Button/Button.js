@@ -152,9 +152,11 @@ Button.propTypes = {
   /**
    * The Alert visual variant
    *
-   * @type {'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'}, with 'outline' extension and with 'solid' extension
+   * @type {'default' | 'black' | 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'dark' | 'light'}, with 'outline' extension and with 'solid' extension
    */
   variant: PropTypes.oneOf([
+    'default',
+    'black',
     'primary',
     'secondary',
     'success',
@@ -187,7 +189,7 @@ Button.defaultProps = {
   fullWidth: false,
   disabled: false,
   size: 'nl',
-  variant: 'primary'
+  variant: 'default'
 };
 
 export default Button;

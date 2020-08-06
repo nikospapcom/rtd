@@ -11,9 +11,19 @@ const Buttons = () => {
     <div className="container mx-auto">
       <div className="text-3xl">Buttons</div>
       <hr className="my-8" />
+      <div className="my-6 text-xl">Default</div>
+      <div>
+        <Button className="mr-2 mb-2">Default</Button>
+        <Button className="mr-2 mb-2" variant="black">
+          Default
+        </Button>
+      </div>
+      <hr className="my-8" />
       <div className="my-6 text-xl">Basic</div>
       <div>
-        <Button className="mr-2 mb-2">Primary</Button>
+        <Button className="mr-2 mb-2" variant="primary">
+          Primary
+        </Button>
         <Button className="mr-2 mb-2" variant="secondary">
           Secondary
         </Button>
@@ -121,7 +131,7 @@ const Buttons = () => {
       <hr className="my-8" />
       <div className="my-6 text-xl">Disabled State</div>
       <div>
-        <Button className="mr-2 mb-2" disabled>
+        <Button className="mr-2 mb-2" disabled variant="primary">
           Primary
         </Button>
         <Button className="mr-2 mb-2" disabled variant="success-solid">
@@ -131,7 +141,7 @@ const Buttons = () => {
       <hr className="my-8" />
       <div className="my-6 text-xl">Rounded</div>
       <div>
-        <Button className="mr-2 mb-2" rounded>
+        <Button className="mr-2 mb-2" rounded variant="primary">
           Primary
         </Button>
         <Button className="mr-2 mb-2" rounded variant="secondary-solid">

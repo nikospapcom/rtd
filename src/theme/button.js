@@ -1,4 +1,6 @@
 export const buttonVariant = {
+  default: 'border-white',
+  black: 'text-white bg-black border-black',
   primary: 'text-indigo-600 bg-indigo-200 border-indigo-400',
   secondary: 'text-gray-800 bg-gray-300 border-gray-400',
   success: 'text-green-800 bg-green-200 border-green-400',
@@ -26,6 +28,8 @@ export const buttonVariant = {
 };
 
 export const hoverButtonVariant = {
+  default: 'hover:bg-gray-200 active:bg-gray-200',
+  black: 'hover:bg-black active:bg-black',
   primary: 'hover:bg-indigo-300 active:bg-indigo-300',
   secondary: 'hover:bg-gray-400 active:bg-gray-400',
   success: 'hover:bg-green-300 active:bg-green-300',
