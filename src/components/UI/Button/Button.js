@@ -14,9 +14,16 @@ const Button = props => {
     iconButton,
     rounded,
     size,
+    startIcon: startIconProp,
+    endIcon: endIconProp,
     variant,
     ...rest
   } = props;
+
+  const startIcon = startIconProp && <span>{startIconProp}</span>;
+  const endIcon = endIconProp && <span>{endIconProp}</span>;
+  const content =
+    startIconProp || endIconProp ? <span>{children}</span> : children;
 
   return (
     <button
@@ -30,10 +37,13 @@ const Button = props => {
           : button.hoverVariant[variant],
         rounded ? 'rounded-full' : '',
         iconButton ? 'py-2 px-2 leading-none rounded-full' : 'py-2 px-4',
+        startIcon || endIcon ? 'inline-flex items-center' : null,
         className
       )}
       {...rest}>
-      {children}
+      {startIcon}
+      {content}
+      {endIcon}
     </button>
   );
 };
@@ -59,6 +69,11 @@ Button.propTypes = {
   disabled: PropTypes.bool,
 
   /**
+   * Element placed after the children.
+   */
+  endIcon: PropTypes.node,
+
+  /**
    * If true, the button will take up the full width of its container.
    */
   fullWidth: PropTypes.bool,
@@ -79,6 +94,11 @@ Button.propTypes = {
    * @type {'sm' | 'nl' | 'lg'}
    */
   size: PropTypes.oneOf(['xs', 'sm', 'nl', 'lg']),
+
+  /**
+   * Element placed before the children.
+   */
+  startIcon: PropTypes.node,
 
   /**
    * Type of Buttons

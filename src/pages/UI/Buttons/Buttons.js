@@ -4,6 +4,7 @@ import { Button } from '../../../components';
 
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import CheckIcon from '@material-ui/icons/Check';
+import SendIcon from '@material-ui/icons/Send';
 
 const Buttons = () => {
   return (
@@ -145,6 +146,24 @@ const Buttons = () => {
         </Button>
         <Button className="mr-2 mb-2" iconButton variant="primary-solid">
           <CheckIcon fontSize="small" />
+        </Button>
+      </div>
+      <hr className="my-8" />
+      <div className="my-6 text-xl">Buttons with icons and label</div>
+      <div>
+        <Button
+          className="mr-2 mb-2"
+          iconButton
+          startIcon={<DeleteForeverIcon className="w-4 h-4" />}
+          variant="danger-solid">
+          Delete
+        </Button>
+        <Button
+          className="mr-2 mb-2"
+          endIcon={<SendIcon className="w-4 h-4" />}
+          iconButton
+          variant="danger-solid">
+          Send
         </Button>
       </div>
     </div>
