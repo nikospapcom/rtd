@@ -6658,6 +6658,10 @@ video {
   flex: 0 1 auto !important;
 }
 
+.flex-0-0-auto {
+  flex: 0 0 auto !important;
+}
+
 .flex-none {
   flex: none !important;
 }
@@ -25475,6 +25479,10 @@ video {
 
   .sm\:flex-initial {
     flex: 0 1 auto !important;
+  }
+
+  .sm\:flex-0-0-auto {
+    flex: 0 0 auto !important;
   }
 
   .sm\:flex-none {
@@ -44297,6 +44305,10 @@ video {
     flex: 0 1 auto !important;
   }
 
+  .md\:flex-0-0-auto {
+    flex: 0 0 auto !important;
+  }
+
   .md\:flex-none {
     flex: none !important;
   }
@@ -63117,6 +63129,10 @@ video {
     flex: 0 1 auto !important;
   }
 
+  .lg\:flex-0-0-auto {
+    flex: 0 0 auto !important;
+  }
+
   .lg\:flex-none {
     flex: none !important;
   }
@@ -81935,6 +81951,10 @@ video {
 
   .xl\:flex-initial {
     flex: 0 1 auto !important;
+  }
+
+  .xl\:flex-0-0-auto {
+    flex: 0 0 auto !important;
   }
 
   .xl\:flex-none {

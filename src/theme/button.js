@@ -1,5 +1,5 @@
 export const buttonVariant = {
-  default: 'border-white',
+  default: 'border-white text-gray-700',
   black: 'text-white bg-black border-black',
   primary: 'text-indigo-600 bg-indigo-200 border-indigo-400',
   secondary: 'text-gray-800 bg-gray-300 border-gray-400',
