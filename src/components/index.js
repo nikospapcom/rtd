@@ -14,3 +14,4 @@ export { default as CardContent } from './UI/CardContent';
 export { default as CardFooter } from './UI/CardFooter';
 export { default as CardHeader } from './UI/CardHeader';
 export { default as CardMedia } from './UI/CardMedia';
+export { default as Dropdown } from './UI/Dropdown';
