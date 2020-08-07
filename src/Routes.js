@@ -13,7 +13,8 @@ import {
   Badges as BadgesPage,
   Breadcrumbs as BreadcrumbsPage,
   Buttons as ButtonsPage,
-  Cards as CardsPage
+  Cards as CardsPage,
+  Dropdowns as DropdownsPage
 } from './pages';
 
 const Routes = () => {
@@ -67,6 +68,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/ui/cards"
+      />
+      <RouteWithLayout
+        component={DropdownsPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/dropdowns"
       />
     </Switch>
   );

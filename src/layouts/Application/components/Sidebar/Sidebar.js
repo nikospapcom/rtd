@@ -101,6 +101,10 @@ const Sidebar = () => {
     {
       title: 'Cards',
       href: '/ui/cards'
+    },
+    {
+      title: 'Dropdowns',
+      href: '/ui/dropdowns'
     }
   ];
 
