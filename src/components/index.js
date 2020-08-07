@@ -1,4 +1,8 @@
 export { default as RouteWithLayout } from './RouteWithLayout';
+
+export { default as Accordion } from './UI/Accordion';
+export { default as AccordionBody } from './UI/AccordionBody';
+export { default as AccordionHeader } from './UI/AccordionHeader';
 export { default as Alert } from './UI/Alert';
 export { default as Avatar } from './UI/Avatar';
 export { default as AvatarGroup } from './UI/AvatarGroup';
