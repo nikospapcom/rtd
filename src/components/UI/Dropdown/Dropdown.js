@@ -17,10 +17,12 @@ const Dropdown = props => {
     buttonContent: buttonContentProp,
     children,
     className,
+    dropUp,
     iconButton,
     hasArrow,
     component: Component = 'button',
     paddingLess,
+    position,
     variant,
     size,
     ...rest
@@ -30,10 +32,6 @@ const Dropdown = props => {
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
 
   const onClick = () => setIsActive(!isActive);
-
-  // console.log(buttonContent);
-
-  // const buttonComponent = <ButtonComponent onClick={onClick} />;
 
   const buttonContent = hasArrow ? (
     <span>{buttonContentProp}</span>
@@ -58,7 +56,7 @@ const Dropdown = props => {
   );
 
   return (
-    <div className="relative" {...rest}>
+    <div className={clsx('relative inline-block', className)} {...rest}>
       <Component
         className={clsx(
           'transition duration-300 rounded border outline-none',
@@ -77,13 +75,14 @@ const Dropdown = props => {
       </Component>
 
       <div
-        className={`bg-white shadow rounded border overflow-hidden absolute text-gray-700 pt-1 ${
-          isActive ? '' : 'hidden'
-        }`}
+        className={clsx(
+          'bg-white rounded border border-gray-300 overflow-hidden absolute text-gray-700 z-10 w-48 text-left px-2 py-1',
+          isActive ? '' : 'hidden',
+          dropUp ? 'bottom-full' : 'top-full',
+          position === 'left' ? 'left-0' : 'right-0'
+        )}
         ref={dropdownRef}>
-        <span>item 1</span>
-        <span>item 2</span>
-        <span>item 3</span>
+        {children}
       </div>
     </div>
   );
@@ -122,6 +121,11 @@ Dropdown.propTypes = {
   component: PropTypes.elementType,
 
   /**
+   * If true, the dropUp is true change the open position above button
+   */
+  dropUp: PropTypes.bool,
+
+  /**
    * If true, the button has arrow down and arrow up
    */
   hasArrow: PropTypes.bool,
@@ -135,6 +139,13 @@ Dropdown.propTypes = {
    * If true, the button will have not padding
    */
   paddingLess: PropTypes.bool,
+
+  /**
+   * The dropdown position
+   *
+   * @type {'left' | 'right'}
+   */
+  position: PropTypes.oneOf(['left', 'right']),
 
   /**
    * The Button visual size
@@ -180,7 +191,8 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   size: 'nl',
-  variant: 'default'
+  variant: 'default',
+  position: 'left'
 };
 
 export default Dropdown;

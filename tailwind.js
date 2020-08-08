@@ -299,7 +299,8 @@ module.exports = {
       auto: 'auto',
       '3': '3px',
       '5': '5px',
-      '10': '10px'
+      '10': '10px',
+      full: '100%'
     },
     letterSpacing: {
       tighter: '-0.05em',
