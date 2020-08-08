@@ -56,10 +56,10 @@ const Dropdown = props => {
   );
 
   return (
-    <div className={clsx('relative inline-block', className)} {...rest}>
+    <div className={clsx('relative', className)} {...rest}>
       <Component
         className={clsx(
-          'transition duration-300 rounded border outline-none',
+          'transition duration-300 rounded border outline-none block',
           button.variant[variant],
           button.hoverVariant[variant],
           button.size[size],
@@ -76,7 +76,7 @@ const Dropdown = props => {
 
       <div
         className={clsx(
-          'bg-white rounded border border-gray-300 overflow-hidden absolute text-gray-700 z-10 w-48 text-left px-2 py-1',
+          'bg-white rounded border border-gray-300 overflow-hidden absolute text-gray-700 z-10 w-48 text-left px-1 py-1',
           isActive ? '' : 'hidden',
           dropUp ? 'bottom-full' : 'top-full',
           position === 'left' ? 'left-0' : 'right-0'

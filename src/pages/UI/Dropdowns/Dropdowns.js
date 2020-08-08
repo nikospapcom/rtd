@@ -39,7 +39,10 @@ const Dropdowns = () => {
       </Dropdown>
       <hr className="my-8" />
       <div className="my-6 text-xl">Dropdown with right position</div>
-      <Dropdown buttonContent="Dropdown" className="ml-12" position="right">
+      <Dropdown
+        buttonContent="Dropdown"
+        className="ml-12 inline-block"
+        position="right">
         <DropdownItem>
           <Link to="/">Action</Link>
         </DropdownItem>
@@ -117,7 +120,7 @@ const Dropdowns = () => {
       <div className="my-6 text-xl">Dropdown Button Variants</div>
       <Dropdown
         buttonContent="Dropdown"
-        className="mb-2"
+        className="mb-2 mr-2"
         variant="primary-solid">
         <DropdownItem>
           <Link to="/">Action</Link>
