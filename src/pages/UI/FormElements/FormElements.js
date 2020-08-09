@@ -43,6 +43,13 @@ const FormElements = () => {
           name="box"
           placeholder="This is a placeholder"
         />
+        <TextField
+          id="gray"
+          isGray
+          label="Gray"
+          name="gray"
+          placeholder="This is gray input"
+        />
       </div>
     </div>
   );

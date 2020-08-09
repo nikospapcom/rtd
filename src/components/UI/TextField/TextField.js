@@ -13,6 +13,7 @@ const TextField = props => {
     validMessage,
     error,
     errorMessage,
+    isGray,
     prepend: prependProp,
     append: appendProp,
     ...rest
@@ -43,12 +44,13 @@ const TextField = props => {
         className={clsx(
           'flex items-center border border-gray-300 rounded',
           error && 'border-red-500',
-          valid && 'border-green-400'
+          valid && 'border-green-400',
+          isGray && 'bg-gray-300'
         )}>
         {prepend}
         <input
           className={clsx(
-            'appearance-none w-full py-2 px-2 text-gray-700 text-sm leading-tight outline-none rounded'
+            'appearance-none w-full py-2 px-2 text-gray-700 text-sm leading-tight outline-none rounded bg-transparent'
           )}
           id={id}
           name={name}
@@ -95,6 +97,11 @@ TextField.propTypes = {
    * The input id
    */
   id: PropTypes.string,
+
+  /**
+   * The alternative input style
+   */
+  isGray: PropTypes.bool,
 
   /**
    * The label text
