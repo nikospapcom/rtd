@@ -14,7 +14,8 @@ import {
   Breadcrumbs as BreadcrumbsPage,
   Buttons as ButtonsPage,
   Cards as CardsPage,
-  Dropdowns as DropdownsPage
+  Dropdowns as DropdownsPage,
+  Grids as GridsPage
 } from './pages';
 
 const Routes = () => {
@@ -74,6 +75,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/ui/dropdowns"
+      />
+      <RouteWithLayout
+        component={GridsPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/grid"
       />
     </Switch>
   );

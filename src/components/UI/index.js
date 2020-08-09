@@ -14,3 +14,5 @@ export { default as CardHeader } from './CardHeader';
 export { default as CardMedia } from './CardMedia';
 export { default as Dropdown } from './Dropdown';
 export { default as DropdownItem } from './DropdownItem';
+export { default as Grid } from './Grid';
+export { default as GridColumn } from './GridColumn';

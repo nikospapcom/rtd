@@ -105,6 +105,10 @@ const Sidebar = () => {
     {
       title: 'Dropdowns',
       href: '/ui/dropdowns'
+    },
+    {
+      title: 'Grid System',
+      href: '/ui/grid'
     }
   ];
 

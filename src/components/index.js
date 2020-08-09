@@ -16,3 +16,5 @@ export { default as CardHeader } from './UI/CardHeader';
 export { default as CardMedia } from './UI/CardMedia';
 export { default as Dropdown } from './UI/Dropdown';
 export { default as DropdownItem } from './UI/DropdownItem';
+export { default as Grid } from './UI/Grid';
+export { default as GridColumn } from './UI/GridColumn';
