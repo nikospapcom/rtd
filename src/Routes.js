@@ -15,7 +15,8 @@ import {
   Buttons as ButtonsPage,
   Cards as CardsPage,
   Dropdowns as DropdownsPage,
-  Grids as GridsPage
+  Grids as GridsPage,
+  FormElements as FormElementsPage
 } from './pages';
 
 const Routes = () => {
@@ -81,6 +82,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/ui/grid"
+      />
+      <RouteWithLayout
+        component={FormElementsPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/form-elements"
       />
     </Switch>
   );

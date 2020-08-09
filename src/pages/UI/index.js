@@ -6,3 +6,4 @@ export { default as Badges } from './Badges';
 export { default as Buttons } from './Buttons';
 export { default as Cards } from './Cards';
 export { default as Dropdowns } from './Dropdowns';
+export { default as FormElements } from './FormElements';

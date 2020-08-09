@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Grid, GridColumn } from '../../../components';
 
-const Dropdowns = () => {
+const Grids = () => {
   return (
     <div className="container mx-auto">
       <div className="text-3xl">Grid System</div>
@@ -333,4 +333,4 @@ const Dropdowns = () => {
   );
 };
 
-export default Dropdowns;
+export default Grids;
