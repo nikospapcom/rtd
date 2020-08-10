@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Grids = () => {
+const Typography = () => {
   return (
     <div className="container mx-auto">
       <div className="text-3xl">Typography</div>
@@ -10,4 +10,4 @@ const Grids = () => {
   );
 };
 
-export default Grids;
+export default Typography;
