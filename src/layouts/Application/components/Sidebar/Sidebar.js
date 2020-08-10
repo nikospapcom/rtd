@@ -113,6 +113,10 @@ const Sidebar = () => {
     {
       title: 'Form Elements',
       href: '/ui/form-elements'
+    },
+    {
+      title: 'Typography',
+      href: '/ui/typography'
     }
   ];
 

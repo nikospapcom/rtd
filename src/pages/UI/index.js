@@ -7,3 +7,4 @@ export { default as Buttons } from './Buttons';
 export { default as Cards } from './Cards';
 export { default as Dropdowns } from './Dropdowns';
 export { default as FormElements } from './FormElements';
+export { default as Typography } from './Typography';

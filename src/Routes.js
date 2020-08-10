@@ -16,7 +16,8 @@ import {
   Cards as CardsPage,
   Dropdowns as DropdownsPage,
   Grids as GridsPage,
-  FormElements as FormElementsPage
+  FormElements as FormElementsPage,
+  Typography as TypographyPage
 } from './pages';
 
 const Routes = () => {
@@ -88,6 +89,12 @@ const Routes = () => {
         exact
         layout={ApplicationLayout}
         path="/ui/form-elements"
+      />
+      <RouteWithLayout
+        component={TypographyPage}
+        exact
+        layout={ApplicationLayout}
+        path="/ui/typography"
       />
     </Switch>
   );
