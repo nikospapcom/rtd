@@ -19,11 +19,11 @@ const FormElements = () => {
           name="lastname"
         />
         <TextField
-          valid
-          validMessage="Looks good!"
           id="lastname"
           label="Last Name"
           name="lastname"
+          valid
+          validMessage="Looks good!"
         />
         <TextField
           id="username"
@@ -49,6 +49,27 @@ const FormElements = () => {
           label="Gray"
           name="gray"
           placeholder="This is gray input"
+        />
+        <TextField
+          disabled
+          id="disabled"
+          label="disabled"
+          name="disabled"
+          placeholder="This is disabled input"
+        />
+        <TextField
+          id="readOnly"
+          label="readOnly"
+          name="readOnly"
+          placeholder="This is readOnly input"
+          readOnly
+        />
+        <TextField
+          id="multiline"
+          label="multiline"
+          multiline
+          name="multiline"
+          placeholder="This is multiline input"
         />
       </div>
     </div>
