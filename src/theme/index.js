@@ -14,6 +14,8 @@ import { badgeVariant, badgePill, badgeSize } from './badge';
 
 import { buttonVariant, hoverButtonVariant, buttonSize } from './button';
 
+import { typographyVariant } from './typography';
+
 export const alert = {
   variant: alertVariant,
   size: alertSize,
@@ -44,4 +46,8 @@ export const button = {
   variant: buttonVariant,
   hoverVariant: hoverButtonVariant,
   size: buttonSize
+};
+
+export const typography = {
+  variant: typographyVariant
 };

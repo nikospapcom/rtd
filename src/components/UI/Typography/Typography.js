@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
+import { typography } from '../../../theme';
+
 const Typography = props => {
   const {
     align,
@@ -12,8 +14,11 @@ const Typography = props => {
     display,
     gutterBottom,
     noWrap,
+    variant,
     ...rest
   } = props;
+
+  console.log(typography);
 
   return (
     <Component
@@ -21,8 +26,9 @@ const Typography = props => {
         align && `text-${align}`,
         className,
         display !== 'initial' && display,
-        gutterBottom && 'mb-1',
-        noWrap && 'truncate'
+        gutterBottom && 'mb-4',
+        noWrap && 'truncate',
+        typography.variant[variant]
       )}
       {...rest}>
       {children}
@@ -64,7 +70,23 @@ Typography.propTypes = {
   /**
    * If true, the text will not wrap, but instead will truncate with an ellipsis.
    */
-  noWrap: PropTypes.bool
+  noWrap: PropTypes.bool,
+
+  /**
+   * The variant of the typography
+   */
+  variant: PropTypes.oneOf([
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'subtitle1',
+    'subtitle2',
+    'body1',
+    'body2'
+  ])
 };
 
 export default Typography;
