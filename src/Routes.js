@@ -6,7 +6,7 @@ import { RouteWithLayout } from './components';
 import { Application as ApplicationLayout } from './layouts';
 
 import {
-  Dashboard as DashboardPage,
+  DashboardAnalytics as DashboardAnalyticsPage,
   Accordions as AccordionsPage,
   Alerts as AlertsPage,
   Avatars as AvatarsPage,
@@ -23,12 +23,12 @@ import {
 const Routes = () => {
   return (
     <Switch>
-      <Redirect exact from="/" to="/dashboard" />
+      <Redirect exact from="/" to="/dashboard-analytics" />
       <RouteWithLayout
-        component={DashboardPage}
+        component={DashboardAnalyticsPage}
         exact
         layout={ApplicationLayout}
-        path="/dashboard"
+        path="/dashboard-analytics"
       />
       <RouteWithLayout
         component={AccordionsPage}

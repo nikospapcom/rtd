@@ -13,11 +13,11 @@ const Sidebar = () => {
       subpages: [
         {
           title: 'Analytics',
-          href: '/dashboard/analytics'
+          href: '/dashboard-analytics'
         },
         {
           title: 'Ecommerce',
-          href: '/dashboard/ecommerce'
+          href: '/dashboard-ecommerce'
         }
       ]
     }
