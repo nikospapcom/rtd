@@ -9,7 +9,7 @@ const Application = props => {
   return (
     <div className="bg-white font-body flex">
       <Sidebar />
-      <div className="w-full flex flex-col h-screen overflow-y-hidden">
+      <div className="w-full flex flex-col h-screen overflow-y-hidden bg-gray-200">
         <Header />
         <div className="w-full overflow-x-hidden border-t flex flex-col">
           <main className="w-full flex-grow p-6">{children}</main>

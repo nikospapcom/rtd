@@ -2,24 +2,33 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import { SidebarNavDropdown } from './SidebarNavDropdown';
+
 const SidebarNav = props => {
   const { pages } = props;
 
   return (
-    <div className="py-1">
+    <div className="mb-4">
       {props.title ? (
-        <div className="pl-5 text-2xs uppercase tracking-widest font-bold">
+        <div className="pl-5 py-2 text-xs tracking-widest text-gray-700">
           {props.title}
         </div>
       ) : null}
       <nav>
         {pages.map(page => (
-          <NavLink
-            className="flex items-center active-nav-link  py-2 pl-5 nav-item text-xs text-gray-700 tracking-wide"
-            key={page.title}
-            to={page.href}>
-            {page.title}
-          </NavLink>
+          <React.Fragment key={page.title}>
+            {page.subpages ? (
+              <SidebarNavDropdown page={page} />
+            ) : (
+              <NavLink
+                activeClassName="text-blue-600"
+                className="flex items-center active-nav-link w-full py-2 pl-5 pr-2 nav-item text-sm text-gray-700 tracking-wide"
+                to={page.href}>
+                {page.icon}
+                {page.title}
+              </NavLink>
+            )}
+          </React.Fragment>
         ))}
       </nav>
     </div>
@@ -27,6 +36,7 @@ const SidebarNav = props => {
 };
 
 SidebarNav.propTypes = {
+  href: PropTypes.string,
   pages: PropTypes.array.isRequired,
   title: PropTypes.string
 };
