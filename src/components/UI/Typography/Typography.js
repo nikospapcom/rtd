@@ -18,8 +18,6 @@ const Typography = props => {
     ...rest
   } = props;
 
-  console.log(typography);
-
   return (
     <Component
       className={clsx(
