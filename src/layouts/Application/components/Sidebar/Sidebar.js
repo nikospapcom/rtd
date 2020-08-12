@@ -14,11 +14,11 @@ const Sidebar = () => {
         {
           title: 'Analytics',
           href: '/dashboard-analytics'
-        },
-        {
-          title: 'Ecommerce',
-          href: '/dashboard-ecommerce'
         }
+        // {
+        //   title: 'Ecommerce',
+        //   href: '/dashboard-ecommerce'
+        // }
       ]
     }
     // {
@@ -86,10 +86,10 @@ const Sidebar = () => {
       title: 'UI Elements',
       icon: <CardTravelIcon className="w-4 h-4" />,
       subpages: [
-        {
-          title: 'Accordions',
-          href: '/ui/accordions'
-        },
+        // {
+        //   title: 'Accordions',
+        //   href: '/ui/accordions'
+        // },
         {
           title: 'Alerts',
           href: '/ui/alerts'
