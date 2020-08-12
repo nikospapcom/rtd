@@ -60,7 +60,7 @@ const TextField = props => {
           'flex border border-gray-300 rounded',
           error && 'border-red-500',
           valid && 'border-green-400',
-          isGray && 'bg-gray-300',
+          isGray ? 'bg-gray-300' : 'bg-white',
           disabled && 'bg-gray-300 opacity-50',
           readOnly && 'bg-gray-100',
           multiline ? 'items-start' : 'items-center'

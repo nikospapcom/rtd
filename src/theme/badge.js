@@ -7,14 +7,14 @@ export const badgeVariant = {
   info: 'text-blue-800 bg-blue-200 border-blue-400',
   light: 'text-gray-600 bg-gray-100 border-gray-200',
   dark: 'text-gray-800 bg-gray-500 border-gray-800',
-  'primary-outline': 'text-indigo-600 bg-white border border-indigo-600',
-  'secondary-outline': 'text-gray-600 bg-white border border-gray-600',
-  'success-outline': 'text-green-600 bg-white border border-green-600',
-  'danger-outline': 'text-red-400 bg-white border border-red-400',
-  'warning-outline': 'text-yellow-600 bg-white border border-yellow-600',
-  'info-outline': 'text-blue-600 bg-white border border-blue-600',
-  'light-outline': 'text-gray-600 bg-white border border-gray-600',
-  'dark-outline': 'text-gray-800 bg-white border border-gray-800'
+  'primary-outline': 'text-indigo-600 border border-indigo-600',
+  'secondary-outline': 'text-gray-600 border border-gray-600',
+  'success-outline': 'text-green-600 border border-green-600',
+  'danger-outline': 'text-red-400 border border-red-400',
+  'warning-outline': 'text-yellow-600 border border-yellow-600',
+  'info-outline': 'text-blue-600 border border-blue-600',
+  'light-outline': 'text-gray-600 border border-gray-600',
+  'dark-outline': 'text-gray-800 border border-gray-800'
 };
 
 export const badgeSize = {
