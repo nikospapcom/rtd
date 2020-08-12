@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
+
+import ThemeContext from '../../../../../../context/ThemeContext';
+
+import themes from '../../../../../../themes/theme';
 
 import { SidebarNavDropdown } from './SidebarNavDropdown';
 
 const SidebarNav = props => {
+  const { theme } = useContext(ThemeContext);
   const { pages } = props;
 
   return (
     <div className="mb-4">
       {props.title ? (
-        <div className="pl-5 py-2 text-xs tracking-widest text-gray-700">
+        <div
+          className={clsx(
+            'pl-5 py-2 text-xs tracking-widest',
+            themes[theme].sidebar.textColor
+          )}>
           {props.title}
         </div>
       ) : null}
@@ -22,7 +32,10 @@ const SidebarNav = props => {
             ) : (
               <NavLink
                 activeClassName="text-blue-600"
-                className="flex items-center active-nav-link w-full py-2 pl-5 pr-2 nav-item text-sm text-gray-700 tracking-wide"
+                className={clsx(
+                  'flex items-center active-nav-link w-full py-2 pl-5 pr-2 nav-item text-sm tracking-wide',
+                  themes[theme].sidebar.linkColor
+                )}
                 to={page.href}>
                 {page.icon}
                 {page.title}

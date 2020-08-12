@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import clsx from 'clsx';
+import ThemeContext from '../../../../context/ThemeContext';
+
+import themes from '../../../../themes/theme';
 
 import { SidebarHeader, SidebarNav } from './components';
 
@@ -6,6 +10,8 @@ import TuneIcon from '@material-ui/icons/Tune';
 import CardTravelIcon from '@material-ui/icons/CardTravel';
 
 const Sidebar = () => {
+  const { theme } = useContext(ThemeContext);
+
   const dashboardPages = [
     {
       title: 'Dashboard',
@@ -135,7 +141,12 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="relative bg-white h-screen w-64 hidden sm:block border-r">
+    <aside
+      className={clsx(
+        'relative h-screen w-64 hidden sm:block border-r',
+        themes[theme].root,
+        themes[theme].defaultBorderColor
+      )}>
       <SidebarHeader />
       <SidebarNav pages={dashboardPages} title="Dashboard" />
       {/* <SidebarNav pages={webAppsPages} title="Web Apps" /> */}

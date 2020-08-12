@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
+import ThemeContext from '../../../context/ThemeContext';
+
+import themes from '../../../themes/theme';
+
 const Card = props => {
+  const { theme } = useContext(ThemeContext);
   const { children, className } = props;
 
   return (
     <div
       className={clsx(
-        'rounded overflow-hidden shadow-primary bg-white',
+        'rounded overflow-hidden shadow-primary',
+        themes[theme].root,
         className
       )}>
       {children}
