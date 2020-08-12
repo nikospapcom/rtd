@@ -37,7 +37,7 @@ const SidebarNavDropdown = props => {
       <div className={clsx(isActive ? '' : 'hidden')}>
         {page.subpages.map(pageItem => (
           <NavLink
-            activeClassName="text-blue-600"
+            activeClassName={clsx(themes[theme].sidebar.linkColorActive)}
             className={clsx(
               'flex items-center active-nav-link w-full py-2 pl-6 pr-1 nav-item text-xs tracking-wide',
               themes[theme].sidebar.linkColor

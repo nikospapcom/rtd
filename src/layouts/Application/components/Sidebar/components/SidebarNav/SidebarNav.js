@@ -31,7 +31,7 @@ const SidebarNav = props => {
               <SidebarNavDropdown page={page} />
             ) : (
               <NavLink
-                activeClassName="text-blue-600"
+                activeClassName={clsx(themes[theme].sidebar.linkColorActive)}
                 className={clsx(
                   'flex items-center active-nav-link w-full py-2 pl-5 pr-2 nav-item text-sm tracking-wide',
                   themes[theme].sidebar.linkColor

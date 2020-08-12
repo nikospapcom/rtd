@@ -5,7 +5,8 @@ const theme = {
     defaultBorderColor: 'border-gray-300',
     sidebar: {
       textColor: 'text-gray-700',
-      linkColor: 'text-gray-700 hover:text-blue-600'
+      linkColor: 'text-gray-700 hover:text-blue-600',
+      linkColorActive: 'text-blue-600'
     }
   },
   dark: {
@@ -14,7 +15,8 @@ const theme = {
     defaultBorderColor: 'border-gray-800',
     sidebar: {
       textColor: 'text-gray-400',
-      linkColor: 'text-gray-400 hover:text-blue-500'
+      linkColor: 'text-gray-400 hover:text-blue-500',
+      linkColorActive: 'text-blue-600'
     }
   }
 };
