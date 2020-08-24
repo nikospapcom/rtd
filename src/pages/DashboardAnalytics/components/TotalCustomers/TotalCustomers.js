@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+
+import clsx from 'clsx';
 
 import {
   Grid,
@@ -8,20 +10,28 @@ import {
   CardContent,
   Avatar,
   Typography
-} from '../../../../components';
+} from 'components';
 
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import GroupIcon from '@material-ui/icons/Group';
 
+import ThemeContext from 'context/ThemeContext';
+
+import themes from 'themes/theme';
+
 const TotalCustomers = props => {
   const { className, ...rest } = props;
+
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Card className={className} {...rest}>
       <CardContent>
         <Grid>
           <GridColumn>
-            <Typography className="text-gray-800" variant="body2">
+            <Typography
+              className={clsx(themes[theme].defaultTextColor)}
+              variant="body2">
               Total Customers
             </Typography>
           </GridColumn>
@@ -31,7 +41,10 @@ const TotalCustomers = props => {
             </Avatar>
           </GridColumn>
         </Grid>
-        <Typography className="text-gray-800" gutterBottom variant="h3">
+        <Typography
+          className={clsx(themes[theme].defaultTextColor)}
+          gutterBottom
+          variant="h3">
           21.523
         </Typography>
         <Typography className="text-gray-600" variant="body2">

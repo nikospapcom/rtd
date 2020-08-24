@@ -24,7 +24,8 @@ const Application = props => {
         <div
           className={clsx(
             'w-full overflow-x-hidden border-t flex flex-col',
-            themes[theme].defaultBorderColor
+            themes[theme].defaultBorderColor,
+            themes[theme].defaultTextColor
           )}>
           <main className="w-full flex-grow p-6">{children}</main>
         </div>

@@ -10,7 +10,7 @@ import {
   Card,
   CardHeader,
   CardContent
-} from '../../../../components';
+} from 'components';
 
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
@@ -87,7 +87,8 @@ const RecentMovement = props => {
     <Dropdown
       buttonContent={<MoreVertIcon fontSize="small" />}
       iconButton
-      position="right">
+      position="right"
+      variant="transparent">
       <DropdownItem gapless>
         <Button component="a" fullWidth href="#" size="sm">
           Action
@@ -105,6 +106,10 @@ const RecentMovement = props => {
     <Card className={className} {...rest}>
       <CardHeader action={cardDropdown} title="Recent Movement" />
       <CardContent>
+        <Button href="#" size="sm" variant="primary-solid">
+          Action
+        </Button>
+        <hr className="my-2" />
         <div style={{ height: '238px' }}>
           <Line data={data} id="chartjs-dashboard-line" options={options} />
         </div>

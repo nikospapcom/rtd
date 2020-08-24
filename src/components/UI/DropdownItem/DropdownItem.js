@@ -13,8 +13,6 @@ const DropdownItem = props => {
     ...rest
   } = props;
 
-  console.log(Component);
-
   return (
     <Component
       className={clsx(

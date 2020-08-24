@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { button } from '../../../theme';
+import { button } from 'theme';
+
+import ThemeContext from 'context/ThemeContext';
+
+import themes from 'themes/theme';
 
 const Button = props => {
   const {
@@ -23,6 +27,11 @@ const Button = props => {
     ...rest
   } = props;
 
+  const { theme } = useContext(ThemeContext);
+
+  console.log(variant);
+  console.log(themes[theme].colors[variant]);
+
   let ComponentProp = component;
 
   if (ComponentProp === 'button' && href) {
@@ -41,6 +50,11 @@ const Button = props => {
     buttonProps['href'] = href;
   }
 
+  let variantClassess = '';
+  if (themes[theme].colors[variant]) {
+    variantClassess = Object.values(themes[theme].colors[variant]).join(' ');
+  }
+
   const startIcon = startIconProp && (
     <span className="mr-1 leading-none">{startIconProp}</span>
   );
@@ -54,12 +68,11 @@ const Button = props => {
     <ComponentProp
       className={clsx(
         'transition duration-300 rounded border',
-        button.variant[variant],
+        variantClassess,
+        // button.variant[variant],
         button.size[size],
         fullWidth ? 'block w-full' : 'inline-block',
-        disabled
-          ? 'opacity-75 cursor-not-allowed'
-          : button.hoverVariant[variant],
+        disabled && 'opacity-75 cursor-not-allowed',
         rounded ? 'rounded-full' : '',
         iconButton ? 'py-2 px-2 leading-none rounded-full' : 'py-2 px-4',
         startIcon || endIcon ? 'inline-flex items-center' : null,
@@ -177,7 +190,8 @@ Button.propTypes = {
     'warning-solid',
     'info-solid',
     'dark-solid',
-    'light-solid'
+    'light-solid',
+    'transparent'
   ])
 };
 

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
+
+import ThemeContext from 'context/ThemeContext';
+
+import themes from 'themes/theme';
 
 const CardHeader = props => {
   const {
@@ -14,14 +18,25 @@ const CardHeader = props => {
     ...rest
   } = props;
 
-  const title = <div className="text-sm text-gray-800">{titleProp}</div>;
+  const { theme } = useContext(ThemeContext);
 
-  const subtitle = <div className="text-xs text-gray-600">{subtitleProp}</div>;
+  const title = titleProp && (
+    <div className={clsx('text-sm', themes[theme].defaultTextColor)}>
+      {titleProp}
+    </div>
+  );
+
+  const subtitle = subtitleProp && (
+    <div className={clsx('text-xs', themes[theme].secondaryTextColor)}>
+      {subtitleProp}
+    </div>
+  );
 
   return (
     <Component
       className={clsx(
-        'p-4 flex items-center border-b border-gray-300',
+        'p-4 flex items-center border-b',
+        themes[theme].defaultBorderColor,
         className
       )}
       {...rest}>
