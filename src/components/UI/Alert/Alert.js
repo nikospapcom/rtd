@@ -17,7 +17,6 @@ const Alert = props => {
   const defaultClasses = 'border rounded relative';
 
   const variantTheme = themes[theme].colors[variant];
-
   let variantClassess = '';
   if (variantTheme) {
     const alertVariants = (({ text, bg, border }) => ({ text, bg, border }))(variantTheme);
