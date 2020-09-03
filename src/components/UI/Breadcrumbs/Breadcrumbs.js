@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { breadcrumbs } from '../../../theme';
+import themes from 'themes/theme';
 
 function insertSeparators(items, className, separator) {
   return items.reduce((acc, current, index) => {
@@ -40,12 +40,12 @@ const Breadcrumbs = props => {
   return (
     <nav
       className={clsx(
-        'bg-gray-200 p-3 text-sm rounded',
-        breadcrumbs.size[size],
+        'bg-gray-200 p-3 rounded',
+        themes.textSize[size],
         classes
       )}
       {...rest}>
-      <ol className={clsx('list-reset flex', breadcrumbs.align[align])}>
+      <ol className={clsx('list-reset flex', themes.breadcrumbs.align[align])}>
         {insertSeparators(breadcrumbItems, seperatorClasses, seperator)}
       </ol>
     </nav>
@@ -83,9 +83,9 @@ Breadcrumbs.propTypes = {
   /**
    * The Alert visual size
    *
-   * @type {'sm' | 'nl' | 'lg'}
+   * @type {'xs' | 'sm' | 'nl' | 'lg'}
    */
-  size: PropTypes.oneOf(['sm', 'nl', 'lg'])
+  size: PropTypes.oneOf(['xs', 'sm', 'nl', 'lg'])
 };
 
 Breadcrumbs.defaultProps = {

@@ -68,6 +68,23 @@ const Breadcrumbs = () => {
       </Card>
       <hr className="my-8" />
       <div className="my-6 text-xl">Size</div>
+      <div className="my-4 text-md">Size xSmall</div>
+      <Card>
+        <CardContent>
+          <BreadcrumbsList
+            aria-label="breadcrumb"
+            seperatorClasses="px-2 text-gray-700"
+            size="xs">
+            <Link className="text-indigo-500" to="/">
+              Home
+            </Link>
+            <Link className="text-indigo-500" to="/ui">
+              UI Elements
+            </Link>
+            <span className="text-gray-600">Breadcrumbs</span>
+          </BreadcrumbsList>
+        </CardContent>
+      </Card>
       <div className="my-4 text-md">Size Small</div>
       <Card>
         <CardContent>

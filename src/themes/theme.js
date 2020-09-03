@@ -508,6 +508,13 @@ const theme = {
       xxl: 'bottom-5 right-5 w-4 h-4'
     }
   },
+  breadcrumbs: {
+    align: {
+      left: 'flex justify-start',
+      center: 'flex justify-center',
+      right: 'flex justify-end'
+    }
+  },
   radius: {
     square: 'rounded-none',
     rounded: 'rounded',
