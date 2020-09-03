@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
 import { avatar } from '../../../theme';
+
+import ThemeContext from 'context/ThemeContext';
+
+import themes from 'themes/theme';
 
 const Avatar = props => {
   const {
@@ -18,6 +22,8 @@ const Avatar = props => {
     status,
     variant
   } = props;
+
+  const { theme } = useContext(ThemeContext);
 
   return (
     <div
@@ -39,8 +45,10 @@ const Avatar = props => {
         <span
           className={clsx(
             'absolute border-2 rounded-full border-white',
-            avatar.status[status],
-            avatar.statusPosition[size]
+            themes.avatar.status[status],
+            themes.avatar.statusPosition[size],
+            // avatar.status[status],
+            // avatar.statusPosition[size]
           )}
         />
       ) : null}

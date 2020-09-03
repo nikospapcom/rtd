@@ -474,6 +474,44 @@ const theme = {
     sm: 'py-2 px-4',
     nl: 'py-3 px-4',
     lg: 'py-3 px-5'
+  },
+  avatar: {
+    size: {
+      xs: 'w-6 h-6 text-xs',
+      sm: 'w-8 h-8 text-sm',
+      nl: 'w-10 h-10',
+      md: 'w-12 h-12 text-xl',
+      lg: 'w-16 h-16 text-2xl',
+      xl: 'w-20 h-20 text-3xl',
+      xxl: 'w-24 h-24 text-4xl'
+    },
+    groupMargin: {
+      xs: '-ml-2',
+      sm: '-ml-3',
+      nl: '-ml-4',
+      md: '-ml-5',
+      lg: '-ml-6',
+      xl: '-ml-8',
+      xxl: '-ml-10'
+    },
+    status: {
+      online: 'bg-green-600',
+      offline: 'bg-gray-600'    
+    },
+    statusPosition: {
+      xs: 'bottom-0 right-0 w-2 h-2',
+      sm: 'bottom-0 right-0 w-3 h-3',
+      nl: 'bottom-0 right-0 w-3 h-3',
+      md: 'bottom-0 right-0 w-4 h-4',
+      lg: 'bottom-0 right-0 w-4 h-4',
+      xl: 'bottom-3 right-3 w-4 h-4',
+      xxl: 'bottom-5 right-5 w-4 h-4'
+    }
+  },
+  radius: {
+    square: 'rounded-none',
+    rounded: 'rounded',
+    'rounded-circle': 'rounded-full'  
   }
 };
 
