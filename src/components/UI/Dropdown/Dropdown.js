@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import { useDetectOutsideClick } from 'utils';
 
-import { button } from 'theme';
+// import { button } from 'theme';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
@@ -61,16 +61,18 @@ const Dropdown = props => {
     </span>
   );
 
+  let variantClassess = '';
+  if (themes[theme].colors[variant]) {
+    variantClassess = Object.values(themes[theme].colors[variant]).join(' ');
+  }
+
   return (
     <div className={clsx('relative', className)} {...rest}>
       <Component
         className={clsx(
           'transition duration-300 rounded border outline-none block',
-          variant !== 'transparent' && button.variant[variant],
-          variant !== 'transparent' && button.hoverVariant[variant],
-          // button.variant[variant],
-          // button.hoverVariant[variant],
-          button.size[size],
+          variantClassess,
+          themes.textSize[size],
           iconButton
             ? (paddingLess ? 'py-0 px-0' : 'py-2 px-2') +
                 ' leading-none rounded-full'

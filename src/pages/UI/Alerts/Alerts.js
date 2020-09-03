@@ -40,6 +40,9 @@ const Alerts = () => {
       <div className="my-6 text-xl">Alert Sizes</div>
       <Card>
         <CardContent>
+          <Alert classes="mb-4" size="xs" variant="secondary">
+            A simple primary alert with size xs!
+          </Alert>
           <Alert classes="mb-4" size="sm" variant="primary">
             A simple primary alert with size sm!
           </Alert>

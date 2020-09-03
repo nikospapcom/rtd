@@ -1,23 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { alert } from '../../../theme';
+import ThemeContext from 'context/ThemeContext';
+
+import themes from 'themes/theme';
 
 import CloseIcon from '@material-ui/icons/Close';
 
 const Alert = props => {
   const { children, classes, variant, size } = props;
 
+  const { theme } = useContext(ThemeContext);
+
   const defaultClasses = 'border rounded relative';
+
+  const variantTheme = themes[theme].colors[variant];
+
+  let variantClassess = '';
+  if (variantTheme) {
+    const alertVariants = (({ text, bg, border }) => ({ text, bg, border }))(variantTheme);
+    variantClassess = Object.values(alertVariants).join(' ');
+  }
 
   return (
     <div
       className={clsx(
         defaultClasses,
-        alert.variant[variant],
-        alert.size[size],
+        variantClassess,
+        themes.textSize[size],
+        themes.paddingSize[size],
         classes,
         props.icon ? 'flex' : ''
       )}
@@ -29,7 +42,7 @@ const Alert = props => {
       {props.subtitle ? (
         <span className="block mb-2">{props.subtitle}</span>
       ) : null}
-      {props.hr ? <hr className={clsx('my-2', alert.hrBg[variant])} /> : null}
+      {props.hr ? <hr className={clsx('my-2', variantTheme.border)} /> : null}
       <span className="block sm:inline">{children}</span>
       {props.dismissible ? (
         <button
@@ -80,7 +93,7 @@ Alert.propTypes = {
    *
    * @type {'sm' | 'nl' | 'lg'}
    */
-  size: PropTypes.oneOf(['sm', 'nl', 'lg']),
+  size: PropTypes.oneOf(['xs', 'sm', 'nl', 'lg']),
 
   /**
    * The subtitle of the alert

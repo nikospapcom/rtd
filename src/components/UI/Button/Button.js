@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { button } from 'theme';
-
 import ThemeContext from 'context/ThemeContext';
 
 import themes from 'themes/theme';
@@ -29,9 +27,6 @@ const Button = props => {
 
   const { theme } = useContext(ThemeContext);
 
-  console.log(variant);
-  console.log(themes[theme].colors[variant]);
-
   let ComponentProp = component;
 
   if (ComponentProp === 'button' && href) {
@@ -52,7 +47,17 @@ const Button = props => {
 
   let variantClassess = '';
   if (themes[theme].colors[variant]) {
-    variantClassess = Object.values(themes[theme].colors[variant]).join(' ');
+    if(disabled) {
+      const disabledVariants = Object.keys(themes[theme].colors[variant]).reduce((object, key) => {
+        if (!key.startsWith('hover')) {
+          object[key] = themes[theme].colors[variant][key]
+        }
+        return object
+      }, {})
+      variantClassess = Object.values(disabledVariants).join(' ');
+    } else {
+      variantClassess = Object.values(themes[theme].colors[variant]).join(' ');
+    }
   }
 
   const startIcon = startIconProp && (
@@ -67,10 +72,9 @@ const Button = props => {
   return (
     <ComponentProp
       className={clsx(
-        'transition duration-300 rounded border',
+        'transition duration-300 rounded border outline-none',
         variantClassess,
-        // button.variant[variant],
-        button.size[size],
+        themes.textSize[size],
         fullWidth ? 'block w-full' : 'inline-block',
         disabled && 'opacity-75 cursor-not-allowed',
         rounded ? 'rounded-full' : '',

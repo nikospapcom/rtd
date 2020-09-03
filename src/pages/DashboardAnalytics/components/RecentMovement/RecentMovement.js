@@ -106,7 +106,7 @@ const RecentMovement = props => {
     <Card className={className} {...rest}>
       <CardHeader action={cardDropdown} title="Recent Movement" />
       <CardContent>
-        <Button href="#" size="sm" variant="primary-solid">
+        <Button href="#" size="sm" variant="transparent">
           Action
         </Button>
         <hr className="my-2" />
