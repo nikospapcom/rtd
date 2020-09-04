@@ -17,7 +17,7 @@ import GroupIcon from '@material-ui/icons/Group';
 
 import ThemeContext from 'context/ThemeContext';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 const TotalCustomers = props => {
   const { className, ...rest } = props;

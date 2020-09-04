@@ -17,7 +17,7 @@ import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 import ThemeContext from 'context/ThemeContext';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 const Roi = props => {
   const { className, ...rest } = props;

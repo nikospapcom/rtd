@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import ThemeContext from 'context/ThemeContext';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 const Avatar = props => {
   const {
@@ -24,16 +24,14 @@ const Avatar = props => {
   const { theme } = useContext(ThemeContext);
 
   const variantTheme = themes[theme].colors[variant];
-  let variantClassess = '';
+  let variantClasses = '';
   let avatarVariants;
-  if (variantTheme) {
-    if(src) {
-      avatarVariants = (({ text, bg }) => ({ text, bg }))(variantTheme);
-    } else {
-      avatarVariants = (({ text, bg, border }) => ({ text, bg, border }))(variantTheme);
-    }
-    variantClassess = Object.values(avatarVariants).join(' ');
+  if(src) {
+    avatarVariants = (({ text, bg }) => ({ text, bg }))(variantTheme);
+  } else {
+    avatarVariants = (({ text, bg, border }) => ({ text, bg, border }))(variantTheme);
   }
+  variantClasses = Object.values(avatarVariants).join(' ');
 
   return (
     <div
@@ -41,7 +39,7 @@ const Avatar = props => {
         'flex items-center justify-center relative',
         themes.avatar.size[size],
         themes.radius[radius],
-        variantClassess,
+        variantClasses,
         (!src) && 'border',
         grouped ? 'inline-block border-2 border-white' : '',
         grouped ? (isFirst ? themes.avatar.groupMargin[size] : '') : '',

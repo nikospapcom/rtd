@@ -3,9 +3,9 @@ import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
-import ThemeContext from '../../../../../../context/ThemeContext';
+import ThemeContext from 'context/ThemeContext';
 
-import themes from '../../../../../../themes/theme';
+import themes from 'theme';
 
 import { SidebarNavDropdown } from './SidebarNavDropdown';
 

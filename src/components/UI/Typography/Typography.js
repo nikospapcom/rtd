@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { typography } from '../../../theme';
+import themes from 'theme';
 
 const Typography = props => {
   const {
@@ -26,7 +26,7 @@ const Typography = props => {
         display !== 'initial' && display,
         gutterBottom && 'mb-4',
         noWrap && 'truncate',
-        typography.variant[variant]
+        themes.typography[variant]
       )}
       {...rest}>
       {children}

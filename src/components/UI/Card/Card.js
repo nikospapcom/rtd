@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import ThemeContext from '../../../context/ThemeContext';
+import ThemeContext from 'context/ThemeContext';
 
-import themes from '../../../themes/theme';
-
+import themes from 'theme';
 const Card = props => {
   const { theme } = useContext(ThemeContext);
   const { children, className } = props;

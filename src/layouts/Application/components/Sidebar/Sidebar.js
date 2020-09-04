@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
 import clsx from 'clsx';
-import ThemeContext from '../../../../context/ThemeContext';
 
-import themes from '../../../../themes/theme';
+import ThemeContext from 'context/ThemeContext';
+
+import themes from 'theme';
 
 import { SidebarHeader, SidebarNav } from './components';
 

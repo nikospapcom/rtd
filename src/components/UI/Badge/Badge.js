@@ -1,22 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import { badge } from '../../../theme';
+import ThemeContext from 'context/ThemeContext';
+
+import themes from 'theme';
 
 const Badge = props => {
   const { children, classes, isBold, pill, rounded, size, variant } = props;
 
-  const defaultClasses = 'inline-block rounded leading-none relative';
+  const { theme } = useContext(ThemeContext);
+
+  const defaultClasses = 'inline-block rounded leading-none relative border';
+
+  const variantTheme = themes[theme].colors[variant];
+  let variantClasses = '';
+  let badgeVariants;
+  badgeVariants = (({ text, bg, border }) => ({ text, bg, border }))(variantTheme);
+  variantClasses = Object.values(badgeVariants).join(' ');
 
   return (
     <div
       className={clsx(
         defaultClasses,
-        badge.variant[variant],
-        badge.size[size],
-        pill ? badge.pill[size] : '',
+        variantClasses,
+        themes.badges.size[size],
+        pill ? themes.badges.pill[size] : '',
         isBold ? 'font-bold' : '',
         rounded ? 'rounded-full' : '',
         classes

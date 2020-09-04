@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import clsx from 'clsx';
-import ThemeContext from '../../../../context/ThemeContext';
 
-import themes from '../../../../themes/theme';
+import ThemeContext from 'context/ThemeContext';
 
-import { Avatar, Button, Dropdown, DropdownItem } from '../../../../components';
+import themes from 'theme';
+
+import { Avatar, Button, Dropdown, DropdownItem } from 'components';
 
 import WbSunnyIcon from '@material-ui/icons/WbSunny';
 

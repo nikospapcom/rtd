@@ -4,9 +4,9 @@ import clsx from 'clsx';
 
 import { Header, Sidebar } from './components';
 
-import ThemeContext from '../../context/ThemeContext';
+import ThemeContext from 'context/ThemeContext';
 
-import themes from '../../themes/theme';
+import themes from 'theme';
 
 const Application = props => {
   const { theme } = useContext(ThemeContext);

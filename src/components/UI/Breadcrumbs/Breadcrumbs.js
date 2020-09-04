@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 function insertSeparators(items, className, separator) {
   return items.reduce((acc, current, index) => {

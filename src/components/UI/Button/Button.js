@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import ThemeContext from 'context/ThemeContext';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 const Button = props => {
   const {

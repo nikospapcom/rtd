@@ -7,7 +7,6 @@ const TypographyPage = () => {
     <div className="container mx-auto">
       <div className="text-3xl">Typography</div>
       <hr className="my-8" />
-      <div className="my-6 text-xl">Basic grid</div>
       <Typography variant="h1">h1. Heading</Typography>
       <Typography variant="h2">h2. Heading</Typography>
       <Typography variant="h3">h3. Heading</Typography>

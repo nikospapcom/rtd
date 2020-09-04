@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import ThemeContext from 'context/ThemeContext';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 import CloseIcon from '@material-ui/icons/Close';
 

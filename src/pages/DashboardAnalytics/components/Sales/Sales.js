@@ -17,7 +17,7 @@ import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 import ThemeContext from 'context/ThemeContext';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 const Sales = props => {
   const { className, ...rest } = props;

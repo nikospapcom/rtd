@@ -5,14 +5,12 @@ import clsx from 'clsx';
 
 import { useDetectOutsideClick } from 'utils';
 
-// import { button } from 'theme';
-
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 import ThemeContext from 'context/ThemeContext';
 
-import themes from 'themes/theme';
+import themes from 'theme';
 
 const Dropdown = props => {
   const {
