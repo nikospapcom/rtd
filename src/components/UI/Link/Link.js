@@ -11,7 +11,6 @@ import themes from 'theme';
 const Link = props => {
   const {
     className,
-    TypographyClasses,
     underline = 'hover',
     ...rest
   } = props;
