@@ -19,7 +19,7 @@ const SidebarNavDropdown = props => {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
 
-  const onClick = () => setIsActive(!isActive);
+  const handleClick = () => setIsActive(!isActive);
 
   return (
     <>
@@ -28,7 +28,7 @@ const SidebarNavDropdown = props => {
           'flex items-center active-nav-link w-full py-2 pl-5 pr-2 nav-item text-sm tracking-wide outline-none',
           themes[theme].sidebar.linkColor
         )}
-        onClick={onClick}
+        onClick={handleClick}
         type="button">
         {page.icon && <div className="text-current mr-1">{page.icon}</div>}
         {page.title}

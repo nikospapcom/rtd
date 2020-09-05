@@ -27,8 +27,6 @@ const CardMedia = props => {
 
   const mergedStyled = { ...composedStyle, ...componentHeight };
 
-  console.log(isMediaComponent);
-
   return (
     <Component
       className={clsx(

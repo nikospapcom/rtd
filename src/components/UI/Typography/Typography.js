@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import clsx from 'clsx';
+
+import ThemeContext from 'context/ThemeContext';
 
 import themes from 'theme';
 
@@ -14,9 +16,13 @@ const Typography = props => {
     display,
     gutterBottom,
     noWrap,
+    textLight,
     variant,
+    weight,
     ...rest
   } = props;
+
+  const { theme } = useContext(ThemeContext);
 
   return (
     <Component
@@ -26,7 +32,9 @@ const Typography = props => {
         display !== 'initial' && display,
         gutterBottom && 'mb-4',
         noWrap && 'truncate',
-        themes.typography[variant]
+        themes.typography[variant],
+        textLight && themes[theme].secondaryTextColor,
+        weight && `font-${weight}`
       )}
       {...rest}>
       {children}
@@ -71,6 +79,11 @@ Typography.propTypes = {
   noWrap: PropTypes.bool,
 
   /**
+ * If true, the text will has lighten colors than default
+ */
+  textLight: PropTypes.bool,
+
+  /**
    * The variant of the typography
    */
   variant: PropTypes.oneOf([
@@ -84,7 +97,19 @@ Typography.propTypes = {
     'subtitle2',
     'body1',
     'body2'
-  ])
+  ]),
+
+  /**
+   * The weight of the typography
+   */
+  weight: PropTypes.oneOf([
+    'light',
+    'normal',
+    'medium',
+    'semibold',
+    'bold',
+    'black',
+  ]),
 };
 
 export default Typography;

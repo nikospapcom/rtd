@@ -18,5 +18,6 @@ export { default as Dropdown } from './UI/Dropdown';
 export { default as DropdownItem } from './UI/DropdownItem';
 export { default as Grid } from './UI/Grid';
 export { default as GridColumn } from './UI/GridColumn';
+export { default as Link } from './UI/Link';
 export { default as TextField } from './UI/TextField';
 export { default as Typography } from './UI/Typography';

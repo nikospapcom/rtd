@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   Avatar,
   Card,
@@ -7,8 +6,10 @@ import {
   CardHeader,
   CardMedia,
   CardContent,
-  Button
-} from '../../../components';
+  Button,
+  Typography,
+  Link
+} from 'components';
 
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import FavoriteIcon from '@material-ui/icons/Favorite';
@@ -30,14 +31,10 @@ const Cards = () => {
             image="https://tailwindcss.com/img/card-top.jpg"
           />
           <CardContent>
-            <div className="text-base font-medium mb-1">Card Title</div>
-            <div className="text-sm text-gray-500 font-medium mb-2">
-              Card Subtitle
-            </div>
-            <div className="text-sm text-gray-800 mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-            </div>
+            <Typography className="mb-1" variant="body1" weight="medium">Card Title</Typography>
+            <Typography className="mb-2" textLight variant="body2" weight="medium">Card Subtitle</Typography>
+            <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
             <Button
               component="a"
               href="https://www.google.com"
@@ -55,10 +52,8 @@ const Cards = () => {
       <div className="max-w-sm">
         <Card>
           <CardContent>
-            <div className="text-sm text-gray-800">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-            </div>
+            <Typography variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
           </CardContent>
         </Card>
       </div>
@@ -66,18 +61,14 @@ const Cards = () => {
       <div className="max-w-sm">
         <Card>
           <CardContent>
-            <div className="text-base font-medium mb-1">Card Title</div>
-            <div className="text-sm text-gray-500 font-medium mb-2">
-              Card Subtitle
-            </div>
-            <div className="text-sm text-gray-800 mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-            </div>
-            <Link className="text-blue-700 text-sm mr-2" to="/">
+            <Typography className="mb-1" variant="body1" weight="medium">Card Title</Typography>
+            <Typography className="mb-2" textLight variant="body2" weight="medium">Card Subtitle</Typography>
+            <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
+            <Link className="text-sm mr-2" to="/ui/buttons">
               This is a link
             </Link>
-            <Link className="text-blue-700 text-sm" to="/">
+            <Link className="text-sm" to="/">
               Another Link
             </Link>
           </CardContent>
@@ -94,20 +85,16 @@ const Cards = () => {
               image="https://via.placeholder.com/350x170?text=Placeholder"
             />
             <CardContent>
-              <div className="text-sm text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-              </div>
+              <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
             </CardContent>
           </Card>
         </div>
         <div className="flex-1 ">
           <Card className="inline-block">
             <CardContent>
-              <div className="text-sm text-gray-800">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-              </div>
+              <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
             </CardContent>
             <CardMedia
               alt="Contemplative Reptile"
@@ -124,7 +111,7 @@ const Cards = () => {
         <Card className="mb-2">
           <CardHeader
             action={
-              <Button iconButton>
+              <Button iconButton variant="transparent">
                 <MoreVertIcon />
               </Button>
             }
@@ -133,19 +120,15 @@ const Cards = () => {
             title="Nikos Pap"
           />
           <CardContent>
-            <div className="text-sm text-gray-800">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-            </div>
+            <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
           </CardContent>
         </Card>
         <Card>
           <CardHeader title="Featured" />
           <CardContent>
-            <div className="text-sm text-gray-800">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-            </div>
+            <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
           </CardContent>
         </Card>
       </div>
@@ -154,10 +137,8 @@ const Cards = () => {
       <div className="max-w-sm">
         <Card className="mb-2">
           <CardContent>
-            <div className="text-sm text-gray-800">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-            </div>
+            <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
           </CardContent>
           <CardFooter>
             <Button className="mr-2" size="xs" variant="primary-solid">
@@ -168,16 +149,14 @@ const Cards = () => {
         </Card>
         <Card>
           <CardContent>
-            <div className="text-sm text-gray-800">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.
-            </div>
+            <Typography className="mb-2" variant="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              volutpat lorem ante. Aliquam ut congue nisl. Aenean vel mi dui.</Typography>
           </CardContent>
           <CardFooter>
-            <Button iconButton>
+            <Button className="mr-2" iconButton variant="transparent">
               <FavoriteIcon />
             </Button>
-            <Button iconButton>
+            <Button iconButton variant="transparent">
               <ShareIcon />
             </Button>
             <Button className="ml-auto" iconButton variant="danger-outline">

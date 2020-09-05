@@ -5,6 +5,7 @@ const theme = {
     defaultBorderColor: 'border-gray-300',
     defaultTextColor: 'text-gray-800',
     secondaryTextColor: 'text-gray-600',
+    linkColor: 'text-blue-700',
     sidebar: {
       textColor: 'text-gray-700',
       linkColor: 'text-gray-700 hover:text-blue-600',
@@ -240,7 +241,8 @@ const theme = {
     appBg: 'bg-gray-800',
     defaultBorderColor: 'border-gray-800',
     defaultTextColor: 'text-gray-400',
-    secondaryTextColor: 'text-gray-600',
+    secondaryTextColor: 'text-gray-500',
+    linkColor: 'text-blue-400',
     sidebar: {
       textColor: 'text-gray-400',
       linkColor: 'text-gray-400 hover:text-blue-500',
@@ -533,14 +535,14 @@ const theme = {
     'rounded-circle': 'rounded-full'  
   },
   typography: {
-    h1: 'text-6xl font-light',
-    h2: 'text-5xl font-light',
+    h1: 'text-6xl font-normal',
+    h2: 'text-5xl font-normal',
     h3: 'text-3xl font-normal',
     h4: 'text-2xl font-normal',
     h5: 'text-xl font-normal',
     h6: 'text-lg font-normal',
     subtitle1: 'text-base font-normal',
-    subtitle2: 'text-sm font-medium',
+    subtitle2: 'text-sm font-normal',
     body1: 'text-base',
     body2: 'text-sm'
   }

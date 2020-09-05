@@ -16,5 +16,6 @@ export { default as Dropdown } from './Dropdown';
 export { default as DropdownItem } from './DropdownItem';
 export { default as Grid } from './Grid';
 export { default as GridColumn } from './GridColumn';
+export { default as Link } from './Link';
 export { default as TextField } from './TextField';
 export { default as Typography } from './Typography';
